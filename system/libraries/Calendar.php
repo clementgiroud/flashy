@@ -69,7 +69,7 @@ class CI_Calendar {
 	 *
 	 * @var string
 	 */
-	public $start_day = 'sunday';
+	public $start_day = 'monday';
 
 	/**
 	 * How to display months
