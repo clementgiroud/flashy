@@ -21,11 +21,25 @@ class User_model extends CI_Model {
 
 	}
 
-	public function cek_user($data){
-		$query = $this->db->get_where('users',$data);
-		return $query;
+	/*Check Login*/
+   	public function validate($email, $password)
+	{
+		// $this->db->where('status',1);
+		$this->db->where('email', $email);
+		$this->db->where('password', $password);
+		$query = $this->db->get('users');
+		return $query->result();
 	}
+	/*Get Session values */
 
+	public function get_id($email, $password)
+	{
+
+		$this->db->where('email', $email);
+		$this->db->where('password', $password);
+		return $this->db->get('users')->result();
+
+	}
 
 	public function can_log_in(){
 
@@ -40,41 +54,6 @@ class User_model extends CI_Model {
 		}
 
 	}
-
-	// public function login($email, $password)
-	// {
-	// 	$query = $this->db->get_where(
-	// 		'email' => $email,
-	// 		'password' => $password
-	// 	);
-	// 	return $query->result();
-	// 	}
-	// }
-
-	// public function add_temp_user($key) {
-	// 	$data = array(
-	// 		'username' => $this->input->post('username'),
-	// 		'email' => $this->input->post('email'),
-	// 		'password' => md5($this->input->post('password')),
-	// 		'key' => $key
-	// 	);
-	//
-	// 	$query = $this->db->insert('temp_users', $data);
-	// 	if ($query) {
-	// 		return true;
-	// 	} else {
-	// 		return false;
-	// 	}
-	// }
-	//
-	// public function is_key_valid($key) {
-	// 	$this->db->where('key', $key);
-	// 	$query = $this->db->get('temp_users');
-	//
-	// 	if ($query->num_rows() == 1) {
-	// 		return true;
-	// 	} else return false;
-	// }
 
 	public function add_user($username, $email, $password) {
 		$data = array(

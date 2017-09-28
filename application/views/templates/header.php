@@ -6,20 +6,21 @@
 	<meta name="description" content="FLASHY CAR WASH">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="<?= base_url('assets/stylesheets/style.css') ?>" rel="stylesheet">
   <link href="<?= base_url('assets/stylesheets/bootstrap/bootstrap.css') ?>" rel="stylesheet">
-	<!-- <link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap/bootstrap.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap/bootstrap.css">
   <link href="<?= base_url('assets/fonts/font-awesome.css') ?>" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/font-awesome.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/fontawesome-webfont.ttf') ?>">
 	<link rel="stylesheet" type="text/css" href="style/slider.css">
-  <link href="<?= base_url('assets/stylesheets/style.css') ?>" rel="stylesheet">
-	<!-- <link rel="stylesheet" type="text/css" href="style/mystyle.css"> -->
+
 </head>
 <body>
 
 <!-- Header -->
 <div class="allcontain">
 	<div class="header">
+
 			<ul class="socialicon">
 				<li><a href="https://www.facebook.com/flashycarwash/"><i class="fa fa-facebook fa-lg"></i></a></li>
 				<!-- <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
@@ -30,42 +31,21 @@
 				<li>FLASHY CAR WASH          La propreté c'est nous... Alors détendez-vous !!! </li>
 				<!-- <li class="flashy">FLASHY CAR WASH</li> -->
 			</ul>
-			<ul class="logreg">
-				<li><a href="<?= site_url('auth/login')?>">Admin</a></li>
-			</ul>
+
 			<div id="h-account-cart">
 				<p id="h-account"> <a id="h-account-a" class="pop-bottom-right" href="<?= site_url('user/signup')?>"><span class="icon" data-icon="&#xe067;" aria-hidden="true"></span>Bienvenue, <span id="h-account-span">identifiez-vous</span></a> </p>
 				<p id="h-cart"> <a id="h-cart-a" href=""> <strong id="h-cart-h1"><span class="icon" data-icon="&#xe00d;" aria-hidden="true"></span></strong>  </a> </p> </div>
 	</div>
 	<!-- Navbar Up -->
 	<nav class="topnavbar navbar-default topnav">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed toggle-costume" data-toggle="collapse" data-target="#upmenu" aria-expanded="false">
-					<span class="sr-only"> Toggle navigaion</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<!-- <div class="logo"><a class="navbar-brand logo" href="#"><img src="<?= base_url('assets/images/logo.jpg') ?>" alt="logo"></a>
-				</div> -->
-			</div>
-		</div>
+
 		<div class="collapse navbar-collapse" id="upmenu">
 			<ul class="nav navbar-nav" id="navbarontop">
+				<li><img class="logo" src="<?= base_url('assets/images/logo.png') ?>" alt="logo" width="380" height="88"></li>
 				<li class="active"><a href="<?= site_url('main'); ?>">ACCUEIL</a> </li>
-				<li>
-					<a href="<?php echo site_url("tarifs/viewcarte") ?>">TARIFS</a>
-
-				</li>
-				<li>
-					<a href="<?php echo site_url("main/services") ?>">NOS PLUS</a>
-
-				</li>
-				<li>
-					<a href="<?php echo site_url("contact") ?>">CONTACT</a>
-
-				</li>
+				<li class="active"><a href="<?php echo site_url("tarifs/viewcarte") ?>">TARIFS</a></li>
+				<li class="active"><a href="<?php echo site_url("main/services") ?>">NOS PLUS</a></li>
+				<li class="active"><a href="<?php echo site_url("contact") ?>">CONTACT</a></li>
 				<!-- <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ESPACE PERSO <span class="caret"></span></a>
 						<ul class="dropdown-menu dropdowncostume">
@@ -79,6 +59,7 @@
 		</div>
 	</nav>
 </div>
+
 
 <!-- <section id="account-pop">
 	<div id="c1-account-pop"> <span id="account-arrow"><span class="icon" data-icon="&#xf0d8;" aria-hidden="true"></span></span>

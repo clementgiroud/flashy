@@ -27,7 +27,7 @@
 
 
   <div class="container">
-    <h1>Bienvenue sur la page d'administration</h1>
+    <h1>Bienvenue sur la page d'administration</h1><a href='<?php echo site_url("user/logout") ?>'>Déconnexion</a>
 </center>
     <h3>Tarifs</h3>
     <br />

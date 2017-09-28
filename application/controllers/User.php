@@ -14,10 +14,7 @@ class User extends CI_Controller {
 
 	}
 
-
 	public function index() {
-
-
 
 	}
 
@@ -53,8 +50,6 @@ class User extends CI_Controller {
 
 			);
 
-
-
    		if ($this->User_model->add_user($username, $email, $password)) {
 
    			// user creation ok
@@ -76,7 +71,6 @@ class User extends CI_Controller {
 
    	}
 
-
 	}
 
 	public function login() {
@@ -85,89 +79,69 @@ class User extends CI_Controller {
 
   }
 
-	public function cek_login()
-	{
-		$data = array('email' => $this->input->post('email') ,
-					  'password' => $this->input->post('password')
-					  );
-		$hasil = $this->User_model->cek_user($data);
-		if ($hasil->num_rows() == 1){
-			foreach($hasil->result() as $sess)
-            {
-              $sess_data['logged_in'] = '';
-              $sess_data['email'] = $sess->email;
-              $sess_data['type'] = $sess->type;
-              $this->session->set_userdata($sess_data);
-            }
-			if ($this->session->userdata('type')=='admin'){
-				redirect('admin');
-			}
-			elseif ($this->session->userdata('type')=='user'){
-				redirect('member');
-			}
-		}
-		else
-		{
-			echo " <script>alert('Gagal Login: Cek username , password!');history.go(-1);</script>";
-		}
-
-	}
-
-
 	public function login_validation()
 	{
-		$this->load->library('form_validation');
-		$data = array('email' => $this->input->post('email') ,
-					  'password' => $this->input->post('password')
-					  );
-		$hasil = $this->User_model->cek_user($data);
-		if ($hasil->num_rows() == 1){
-			foreach($hasil->result() as $sess)
-            {
-              $sess_data['logged_in'] = '';
-              $sess_data['email'] = $sess->email;
-              $sess_data['type'] = $sess->type;
-              $this->session->set_userdata($sess_data);
+		   $this->form_validation->set_rules('email', 'Email', 'required|trim|callback_validate_credentials');
+		   $this->form_validation->set_rules('password', 'Password', 'required|md5|trim');
+
+		   if ($this->form_validation->run()) {
+		 		$data = array(
+		 			'email' => $this->input->post('email'),
+		 			'is_logged_in' => 1
+		 		);
+		     $email = $this->input->post('email');
+         $password = $this->input->post('password');
+         $is_valid = $this->User_model->validate($email, $password);
+
+         if($is_valid)/*If valid email and password set */
+         {
+             $get_id = $this->User_model->get_id($email, $password);
+
+            foreach($get_id as $val)
+                {
+                     $id = $val->id;
+                     $email = $val->email;
+                     $password = $val->password;
+                     $type = $val->type;
+                     if($type == 'admin')
+                     {
+                        $data = array(
+                        'email' => $email,
+                        'password' => $password,
+                        'type'=> $type,
+                        'id'=> $id,
+                        'is_logged_in' => true
+                        );
+                          $this->session->set_userdata($data); /*Here  setting the Admin datas in session */
+                          redirect('admin');
+                     }
+                    if($type == 'user')
+                     {
+
+											 $data = array(
+											 'email' => $email,
+											 'password' => $password,
+											 'type'=> $type,
+											 'id'=> $id,
+											 'is_logged_in' => true
+                        );
+                          $this->session->set_userdata($data); /*Here  setting the  user datas values in session */
+                          redirect('user/members');
+                     }
+
+
             }
-			if ($this->session->userdata('type')=='admin'){
-				redirect('admin');
-			}
-			elseif ($this->session->userdata('type')=='user'){
-				redirect('member');
-			}
-		}
-		else
-		{
-			echo " <script>alert('Gagal Login: Cek username , password!');history.go(-1);</script>";
-		}
 
+        }
+        else // incorrect email or password
+        {
+
+            $this->session->set_flashdata('msg1', 'Email ou mot de passe incorrect !');
+            redirect('user/login');
+        }
+
+    }
 	}
-
-  // public function login_validation() {
-  //   $this->load->library('form_validation');
-	//
-  //   $this->form_validation->set_rules('email', 'Email', 'required|trim|callback_validate_credentials');
-  //   $this->form_validation->set_rules('password', 'Password', 'required|md5|trim');
-	//
-  //   if ($this->form_validation->run()) {
-	// 		$data = array(
-	// 			'email' => $this->input->post('email'),
-	// 			'is_logged_in' => 1
-	// 		);
-	// 		$this->session->set_userdata($data);
-  //     redirect('user/members');
-	// 		// if ($this->session->userdata('type')=='admin'){
-	// 		// 	redirect('admin');
-	// 		// }
-	// 		// elseif ($this->session->userdata('type')=='user'){
-	// 		// 	redirect('member');
-	// 		// }
-	//
-  //   } else {
-  //     $this->load->view('pages/login');
-  //   }
-  // }
-
 
   public function members() {
 		if ($this->session->userdata('is_logged_in')){
@@ -177,8 +151,7 @@ class User extends CI_Controller {
 		} else {
 			redirect('user/restricted');
 		}
-		// $this->load->library('calendar');
-		// echo $this->calendar->generate($this->uri->segment(3), $this->uri->segment(4));
+
   }
 
 	public function restricted (){
@@ -198,7 +171,7 @@ class User extends CI_Controller {
 
 	public function logout() {
 		$this->session->sess_destroy();
-		redirect('user/login');
+		redirect('main');
 	}
 
 
