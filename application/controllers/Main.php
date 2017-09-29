@@ -9,6 +9,7 @@ class Main extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('templates/header');
 		$this->load->view('pages/home');
+		$this->load->view('templates/footer');
 	}
 
 

@@ -17,19 +17,19 @@ class Tarifs_model extends CI_Model
     public function count() {
         return $this->db->count_all_results('tarif');
     }
-    // public function getCat($cat) {
-    //     $this->db->where('categorieD =', $cat);
-    //     $query = $this->db->get('dvd');
-    //     return $query->result();
-    // }
-    public function getAll() {
+    
+    public function getAll_tarif() {
          $query = $this->db->get('tarif');
+
 
         return $query->result();
     }
-    public function getOne($id) {
-        $this->db->where('id_tarif =', $id);
-        $query = $this->db->get('tarif');
-        return $query->result()[0];
+
+    public function getAll_option() {
+         $query = $this->db->get('option');
+
+
+        return $query->result();
     }
+
 }

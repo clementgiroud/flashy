@@ -33,9 +33,20 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		$data['tarif']=$this->Members_model->get_all_tarif();
-			$this->load->view('admin',$data);
+		$this->load->view('admin/admin');
 	}
+
+	public function tarifs()
+	{
+		$data['tarif']=$this->Members_model->get_all_tarif();
+			$this->load->view('admin/admin_tarifs',$data);
+	}
+
+	public function reservation()
+	{
+			$this->load->view('admin/calendrier');
+	}
+
 
 	public function tarif_add()
 		{

@@ -43,9 +43,9 @@
 			<ul class="nav navbar-nav" id="navbarontop">
 				<li><img class="logo" src="<?= base_url('assets/images/logo.png') ?>" alt="logo" width="380" height="88"></li>
 				<li class="active"><a href="<?= site_url('main'); ?>">ACCUEIL</a> </li>
-				<li class="active"><a href="<?php echo site_url("tarifs/viewcarte") ?>">TARIFS</a></li>
-				<li class="active"><a href="<?php echo site_url("main/services") ?>">NOS PLUS</a></li>
-				<li class="active"><a href="<?php echo site_url("contact") ?>">CONTACT</a></li>
+				<li class="active"><a href="<?= site_url("tarifs/viewcarte") ?>">TARIFS</a></li>
+				<li class="active"><a href="<?= site_url("main/services") ?>">NOS PLUS</a></li>
+				<li class="active"><a href="<?= site_url("contact") ?>">CONTACT</a></li>
 				<!-- <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ESPACE PERSO <span class="caret"></span></a>
 						<ul class="dropdown-menu dropdowncostume">

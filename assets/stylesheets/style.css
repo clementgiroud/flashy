@@ -383,4 +383,66 @@ padding-left: 5%;
 #navbarontop a:focus {
   outline: none;
   /*border-bottom: 2px solid #C59E47;*/
-}*/
+}
+
+
+
+/*PAGE TARIFS*/
+
+h1.TTC{
+	display: inline;
+	color: #FEFEFE;
+	padding-left: 35px;
+}
+h1.HT{
+	display: inline;
+	color: #FE006E;
+}
+li{
+	list-style: none;
+}
+h3.description{
+	/*color: #005478;*/
+	color: #0B89BF;
+}
+h3.nom_tarif{
+	color: #FEFEFE;
+	display: inline;
+}
+h3.nom_option{
+	color: #FEFEFE;
+	display: inline;
+}
+h3.ht{
+	color: #FE006E;
+	display: inline;
+}
+h3.ht{
+	color: #FE006E;
+	display: inline;
+
+}
+.option{
+	color:#FE006E;
+
+}
+.panel-title{
+	display: inline;
+}
+
+.content-box-large.box-with-header{
+	margin-left: 40px;
+	color: #FEFEFE;
+	border-style: dotted;
+}
+
+/*FIN PAGE TARIFS*/
+
+/*ESPACE PERSO*/
+
+#container_members{
+	color: #FEFEFE;
+}
+
+
+/*FIN ESPACE PERSO*/

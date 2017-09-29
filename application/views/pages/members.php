@@ -41,6 +41,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="<?= base_url('assets/stylesheets/bootstrap/bootstrap.min.css')?>">
+  <link href="<?= base_url('assets/bootstrap/css/style.css') ?>" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?= base_url('assets/fonts/font-awesome.min.css')?>">
   <!-- Ionicons -->
@@ -69,22 +70,23 @@
 <div class="wrapper">
 
   <header class="main-header">
+
     <!-- Logo -->
-    <a href="../index2.html" class="logo">
+    <a href="" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>Admin</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+      <!-- <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </a>
+      </a> -->
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
@@ -165,6 +167,7 @@
               <li class="footer"><a href="#">See All Messages</a></li>
             </ul>
           </li>
+
           <!-- Notifications: style can be found in dropdown.less -->
           <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -357,6 +360,8 @@
         </div>
       </form>
       <!-- /.search form -->
+
+
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
