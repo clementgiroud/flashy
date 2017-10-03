@@ -23,7 +23,7 @@ class Admin extends CI_Controller {
 	 	{
 	 		parent::__construct();
 			$this->load->helper('url');
-	 		$this->load->model('Members_model');
+	 		$this->load->model('Admin_model');
 			// $this->load->library('form_validation','session');
 
 	 	}
@@ -33,8 +33,63 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->view('admin/restricted');
+
+	}
+
+	public function success()
+	{
 		$this->load->view('admin/admin');
 	}
+
+	public function compte(){
+		$data['compte']=$this->Admin_model->get_all_user();
+		$this->load->view('admin/compte',$data);
+	}
+
+
+
+	public function create_user()
+	{
+		
+		$data = array(
+				'id' => $this->input->post('id'),
+				'username' => $this->input->post('username'),
+				'email' => $this->input->post('email'),
+				'password' => $this->input->post('password'),
+				'type' => $this->input->post('type'),
+
+			);
+		$insert = $this->Admin_model->create_user($data);
+		echo json_encode(array("status" => TRUE));
+	}
+
+	public function user_update()
+	{
+		$data = array(
+			'username' => $this->input->post('username'),
+			'email' => $this->input->post('email'),
+			'password' => $this->input->post('password'),
+			'type' => $this->input->post('type'),
+		);
+		$this->Admin_model->user_update(array('id' => $this->input->post('id')), $data);
+		echo json_encode(array("status" => TRUE));
+	}
+
+	public function user_delete($id)
+	{
+		$this->Admin_model->delete_user_by_id($id);
+		echo json_encode(array("status" => TRUE));
+	}
+
+
+	public function ajax_edit_user($id)
+	{
+		$data = $this->Admin_model->get_by_id($id);
+
+		echo json_encode($data);
+	}
+
 
 	public function tarifs()
 	{
@@ -64,22 +119,20 @@ class Admin extends CI_Controller {
 		{
 			$data = $this->Members_model->get_by_id($id);
 
-
-
 			echo json_encode($data);
 		}
 
 		public function tarif_update()
-	{
-		$data = array(
+	  {
+		  $data = array(
 				'prix_tarif_ttc' => $this->input->post('prix_tarif_ttc'),
 				'nom_tarif' => $this->input->post('nom_tarif'),
 				'prix_tarif_ht' => $this->input->post('prix_tarif_ht'),
 				'tarif_description' => $this->input->post('tarif_description'),
 			);
-		$this->Members_model->tarif_update(array('id_tarif' => $this->input->post('id_tarif')), $data);
-		echo json_encode(array("status" => TRUE));
-	}
+		  $this->Members_model->tarif_update(array('id_tarif' => $this->input->post('id_tarif')), $data);
+		  echo json_encode(array("status" => TRUE));
+	  }
 
 	public function tarif_delete($id)
 	{

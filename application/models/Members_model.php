@@ -7,6 +7,7 @@ class Members_model extends CI_Model
 	var $table = 'tarif';
 
 
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -48,6 +49,10 @@ return $query->result();
 		$this->db->where('id_tarif', $id);
 		$this->db->delete($this->table);
 	}
+
+	
+
+
 
 
 }

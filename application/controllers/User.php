@@ -113,7 +113,7 @@ class User extends CI_Controller {
                         'is_logged_in' => true
                         );
                           $this->session->set_userdata($data); /*Here  setting the Admin datas in session */
-                          redirect('admin');
+                          redirect('admin/success');
                      }
                     if($type == 'user')
                      {

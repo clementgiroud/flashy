@@ -12,7 +12,7 @@
 
 <body>
   <div id="container">
-    <h1>Vous n'avez pas accès a cette page</h1>
+    <h1>Vous n'avez pas les autorisations nécessaires pour accéder à cette page</h1>
 
     <a href='<?php echo site_url("user/login"); ?>' >Connexion</a>
 

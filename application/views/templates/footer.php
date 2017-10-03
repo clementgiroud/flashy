@@ -10,7 +10,7 @@
 
 	<title>Footer</title>
 
-	<link rel="stylesheet" href="<?= base_url('assets/stylesheets/demo.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/stylesheets/footer.css')?>">
 	<link rel="stylesheet" href="<?= base_url('assets/stylesheets/footer-distributed-with-address-and-phones.css')?>">
 
 	<link rel="stylesheet" href="<?= base_url('assets/fonts/font-awesome.min.css')?>">
