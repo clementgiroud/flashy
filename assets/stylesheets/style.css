@@ -71,6 +71,7 @@ combo-simplifie…ss&0.1.4129:16
     padding: 16px;
     background: #F7F7F7;
 		border-radius: 5px;
+		color: black;
 }
 .form-style-6 h1{
     background: #FE006E;
@@ -391,7 +392,33 @@ padding-left: 5%;
   /*border-bottom: 2px solid #C59E47;*/
 }
 
+/*PAGE LOGIN et SIGNUP*/
 
+#container_login{
+	background-color: black;
+}
+body.login{
+	background-color: black;
+	color: white;
+
+}
+#container_signup{
+	background-color: black;
+}
+body.signup{
+	background-color: black;
+	color: white;
+}
+
+/*FIN PAGE LOGIN et SIGNUPs*/
+
+/*PAGE ADMIN*/
+
+body.admin{
+	background-color: black;
+}
+
+/*FIN PAGE ADMIN*/
 
 /*PAGE TARIFS*/
 

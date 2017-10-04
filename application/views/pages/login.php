@@ -10,7 +10,7 @@
       	<link href="<?= base_url('assets/bootstrap/css/style.css') ?>" rel="stylesheet">
 </head>
 
-<body><br/><br/><br/><br/><br/><br/><br/>
+<body class="login"><br/><br/><br/><br/><br/><br/><br/>
   <div id="container_login">
     <div class="form-style-6">
     <h1>CONNEXION</h1>

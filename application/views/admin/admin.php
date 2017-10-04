@@ -10,11 +10,12 @@
 	<!-- <link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap/bootstrap.css"> -->
   <link href="<?= base_url('assets/fonts/font-awesome.css') ?>" rel="stylesheet">
 	<link href="<?php echo base_url('assests/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
+	<link href="<?= base_url('assets/stylesheets/admin_style.css')?>" rel="stylesheet">
 	<link href="<?php echo base_url('assests/datatables/css/dataTables.bootstrap.css')?>" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/font-awesome.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/fontawesome-webfont.ttf') ?>">
 	<link rel="stylesheet" type="text/css" href="style/slider.css">
-  <!-- <link href="<?= base_url('assets/stylesheets/style.css') ?>" rel="stylesheet"> -->
+
 	<!-- <link rel="stylesheet" type="text/css" href="style/mystyle.css"> -->
 	<script src="<?php echo base_url('assets/jquery/jquery-3.1.0.min.js')?>"></script>
 	<script src="<?php echo base_url('assets/javascripts/bootstrap.min.js')?>"></script>
@@ -22,9 +23,11 @@
 	<script src="<?php echo base_url('assets/datatables/js/dataTables.bootstrap.js')?>"></script>
 </head>
 
+<body class="admin">
+
 
 	<div class="header">
-	     <div class="container">
+	     <div class="container_admin">
 	        <div class="row">
 	           <div class="col-md-5">
 	              <!-- Logo -->
