@@ -8,6 +8,8 @@
         <!-- css -->
       	<link href="<?= base_url('assets/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
       	<link href="<?= base_url('assets/bootstrap/css/style.css') ?>" rel="stylesheet">
+        <link rel="icon" href="<?= base_url('assets/images/flashy.ico')?>" type="image/gif">
+        
 </head>
 
 <body class=signup><br/><br/><br/><br/><br/><br/><br/>

@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang = "en">
-<!-- <link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type ="text/css" media="screen" /> -->
+<!DOCTYPE HTML>
+<html>
 
-  <head>
-     <meta charset = "utf-8">
-     <title>Contact </title>
-  </head>
-
-  <body><br/><br/><br/><br/><br/><br/>
+<head>
+        <title>Contact</title>
+        <meta charset="utf-8">
+        <meta name="description" content="165c. uniques">
+        <!-- css -->
+      	<link href="<?= base_url('assets/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+      	<link href="<?= base_url('assets/bootstrap/css/style.css') ?>" rel="stylesheet">
+        <link rel="icon" href="<?= base_url('assets/images/flashy.ico')?>" type="image/gif">
+        
+</head>
+  <body class="contact"><br/><br/><br/><br/><br/><br/>
     <div id="container-contact">
       <div class="form-style-6">
       <h1>Nous contacter</h1>

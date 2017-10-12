@@ -9,10 +9,12 @@ class Tarifs extends CI_Controller {
 			$data['cate'] = $this->Tarifs_model->getAll_tarif();
       $data['opts'] = $this->Tarifs_model->getAll_option();
 
-      $this->load->view('templates/header');
+      $this->load->view('templates/test');
 			$this->load->view('pages/tarifs',$data);
+			// $this->load->view('templates/footer');
+
 
 		}
 
-    
+
 }

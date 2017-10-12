@@ -25,6 +25,7 @@ class Admin extends CI_Controller {
 			$this->load->helper('url');
 	 		$this->load->model('Admin_model');
 			// $this->load->library('form_validation','session');
+			// $this->load->library('Image_crud');
 
 	 	}
 
@@ -51,7 +52,7 @@ class Admin extends CI_Controller {
 
 	public function create_user()
 	{
-		
+
 		$data = array(
 				'id' => $this->input->post('id'),
 				'username' => $this->input->post('username'),
@@ -139,6 +140,27 @@ class Admin extends CI_Controller {
 		$this->Members_model->delete_by_id($id);
 		echo json_encode(array("status" => TRUE));
 	}
+
+	// public function galerie()
+	// {
+	// 	$data['galerie']=$this->Galerie_model->all();
+	// 		$this->load->view('admin/admin_galerie',$data);
+	//
+	// 		$data = [
+  //        'images'   => $this->Galerie_model->all()
+  //     ];
+
+			// $c = new image_CRUD();
+
+// $c->set_table('galerie');
+//
+// $c->set_url_field('url');
+// $c->set_title_field('title');
+// $c->set_ordering_field('order');
+// $c->set_image_path('uploads');
+//
+// $output = $c->render();
+	// }
 
 
 

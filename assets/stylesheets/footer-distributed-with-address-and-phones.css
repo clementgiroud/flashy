@@ -51,11 +51,16 @@
 }
 
 .footer-distributed .footer-company-name{
-	color:  #8f9296;
+	color:  #E60EB8;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
+	text-align: center;
 }
+/*img.marque{
+	text-align: center;
+	margin-left: 150px;
+}*/
 
 /* Footer Center */
 
@@ -96,7 +101,7 @@
 }
 
 .footer-distributed .footer-center p a{
-	color:  #5383d3;
+	color:  #E60EB8;
 	text-decoration: none;;
 }
 

@@ -6,8 +6,12 @@
 	<title>FLASHY CAR WASH </title>
 	<meta name="description" content="FLASHY CAR WASH">
 	<link href="<?= base_url('assets/stylesheets/bootstrap/bootstrap.css') ?>" rel="stylesheet">
-	<link href="<?= base_url('assets/fonts/font-awesome.css') ?>" rel="stylesheet">
 	<link href="<?= base_url('assets/stylesheets/style.css') ?>" rel="stylesheet">
+	<link href="<?= base_url('assets/stylesheets/accueil.css') ?>" rel="stylesheet">
+	<link href="<?= base_url('assets/fonts/font-awesome.css') ?>" rel="stylesheet">
+	<link rel="icon" href="<?= base_url('assets/images/flashy.ico')?>" type="image/gif">
+	
+
 </head>
 
 <body><br/><br/><br/><br/>
@@ -48,7 +52,7 @@
 		<div class="col-md-6">
 
 					<div class="content-box-header">
-						<div class="panel-title"><h1 class="option">Options et suppléments</h1></div>
+						<div class="panel-title"><h1 class="option">Options et suppléments</h1></div><br/>
 					</div>
 					<div class="content-box-large">
 

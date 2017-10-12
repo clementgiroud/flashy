@@ -6,87 +6,301 @@
 	<meta name="description" content="FLASHY CAR WASH">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="<?= base_url('assets/stylesheets/style.css') ?>" rel="stylesheet">
-  <link href="<?= base_url('assets/stylesheets/bootstrap/bootstrap.css') ?>" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap/bootstrap.css">
+  <link href="<?= base_url('assets/stylesheets/bootstrap.css') ?>" rel="stylesheet">
+	<link rel="stylesheet" href="<?= base_url('assets/stylesheets/bootstrap/bootstrap-responsive.css')?>" type="text/css" media="screen">
+	<link rel="stylesheet" href="<?= base_url('assets/stylesheets/camera.css')?>" type="text/css" media="screen">
+	<link href="<?= base_url('assets/stylesheets/header.css') ?>" rel="stylesheet">
   <link href="<?= base_url('assets/fonts/font-awesome.css') ?>" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/font-awesome.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/fontawesome-webfont.ttf') ?>">
 	<link rel="stylesheet" type="text/css" href="style/slider.css">
 
+
+
 </head>
-<body>
 
-<!-- Header -->
-<div class="allcontain">
-	<div class="header">
 
-			<ul class="socialicon">
-				<li><a href="https://www.facebook.com/flashycarwash/"><i class="fa fa-facebook fa-lg"></i></a></li>
-				<!-- <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
-				<li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a></li>
-				<li><a href="#"><i class="fa fa-pinterest fa-lg"></i></a></li> -->
-			</ul>
-			<ul class="givusacall">
-				<li>FLASHY CAR WASH          La propreté c'est nous... Alors détendez-vous !!! </li>
-				<!-- <li class="flashy">FLASHY CAR WASH</li> -->
-			</ul>
 
-			<div id="h-account-cart">
-				<p id="h-account"> <a id="h-account-a" class="pop-bottom-right" href="<?= site_url('user/signup')?>"><span class="icon" data-icon="&#xe067;" aria-hidden="true"></span>Bienvenue, <span id="h-account-span">identifiez-vous</span></a> </p>
-				<p id="h-cart"> <a id="h-cart-a" href=""> <strong id="h-cart-h1"><span class="icon" data-icon="&#xe00d;" aria-hidden="true"></span></strong>  </a> </p> </div>
+
+
+
+	<script type="text/javascript" src="<?= base_url('assets/javascripts/jquery.js')?>"></script>
+	<script type="text/javascript" src="<?= base_url('assets/javascripts/jquery.easing.1.3.js')?>"></script>
+	<script type="text/javascript" src="<?= base_url('assets/javascripts/superfish.js')?>"></script>
+
+	<script type="text/javascript" src="<?= base_url('assets/jquery/jquery.ui.totop.js')?>"></script>
+
+	<script type="text/javascript" src="<?= base_url('assets/javascripts/camera.js')?>"></script>
+	<script type="text/javascript" src="<?= base_url('assets/javascripts/jquery.mobile.customized.min.js')?>"></script>
+
+	<script type="text/javascript" src="<?= base_url('assets/javascripts/jquery.caroufredsel.js')?>"></script>
+	<script type="text/javascript" src="<?= base_url('assets/javascripts/jquery.touchSwipe.min.js')?>"></script>
+
+	<script>
+	$(document).ready(function() {
+		//
+		$('#camera_wrap').camera({
+			//thumbnails: true
+			//alignment			: 'centerRight',
+			autoAdvance			: true,
+			mobileAutoAdvance	: true,
+			fx					: 'scrollRight',
+			height: '52%',
+			hover: false,
+			loader: 'none',
+			navigation: true,
+			navigationHover: true,
+			mobileNavHover: true,
+			playPause: false,
+			pauseOnClick: false,
+			pagination			: true,
+			time: 5000,
+			transPeriod: 800,
+			minHeight: '300px'
+		});
+
+		//	carouFredSel services
+		$('#services .carousel.main ul').carouFredSel({
+			auto: {
+				timeoutDuration: 8000
+			},
+			responsive: true,
+			prev: '.services_prev',
+			next: '.services_next',
+			width: '100%',
+			scroll: {
+				items: 1,
+				duration: 1000,
+				easing: "easeOutExpo"
+			},
+			items: {
+	        	width: '350',
+				height: 'variable',	//	optionally resize item-height
+				visible: {
+					min: 1,
+					max: 4
+				}
+			},
+			mousewheel: false,
+			swipe: {
+				onMouse: true,
+				onTouch: true
+				}
+		});
+
+
+
+
+		$(window).bind("resize",updateSizes_vat).bind("load",updateSizes_vat);
+		function updateSizes_vat(){
+			$('#services .carousel.main ul').trigger("updateSizes");
+		}
+		updateSizes_vat();
+
+
+	}); //
+	$(window).load(function() {
+		//
+
+	}); //
+	</script>
+
+	<!-- GOOGLE MAP -->
+			<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<!--[if lt IE 8]>
+			<div style='text-align:center'>&nbsp;</div>
+		<![endif]-->
+
+	<!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	  <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+	<![endif]-->
+	</head>
+
+	<body class="front">
+	<div id="main">
+
+	<div id="top">
+
+	<div id="slider_wrapper">
+	<div id="slider" class="clearfix">
+		<div id="camera_wrap">
+			<div data-src="imageslider/slide01.jpg">
+				<div class="camera_caption fadeIn">
+					<div class="txt1">Flashy Car Wash</div>
+					<div class="txt2">Lavage, Lustrage et Protection de votre carrosserie</div>
+				</div>
+			</div>
+			<div data-src="imageslider/2.jpg">
+				<div class="camera_caption fadeIn">
+					<div class="txt1">Flashy Car Wash</div>
+					<div class="txt2">Lavage, Renovation et Entretien de vos interieurs.</div>
+				</div>
+			</div>
+			<div data-src="imageslider/slide03.jpg">
+				<div class="camera_caption fadeIn">
+					<div class="txt1">Flashy Car Wash</div>
+					<div class="txt2">Nettoyage et protection de vos Jantes et Accessoires</div>
+				</div>
+			</div>
+			<div data-src="imageslider/slide04.png">
+				<div class="camera_caption fadeIn">
+					<div class="txt1">Flashy Car Wash</div>
+					<div class="txt2">Nettoyage et protection de vos v�hicules de collection</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-- Navbar Up -->
-	<nav class="topnavbar navbar-default topnav">
+	</div>
 
-		<div class="collapse navbar-collapse" id="upmenu">
-			<ul class="nav navbar-nav" id="navbarontop">
-				<li><img class="logo" src="<?= base_url('assets/images/logo.png') ?>" alt="logo" width="380" height="88"></li>
-				<li class="active"><a href="<?= site_url('main'); ?>">ACCUEIL</a> </li>
-				<li class="active"><a href="<?= site_url("tarifs/viewcarte") ?>">TARIFS</a></li>
-				<li class="active"><a href="<?= site_url("main/services") ?>">NOS PLUS</a></li>
-				<li class="active"><a href="<?= site_url("contact") ?>">CONTACT</a></li>
-				<!-- <li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ESPACE PERSO <span class="caret"></span></a>
-						<ul class="dropdown-menu dropdowncostume">
-							<li><a href="<?php echo site_url("user/signup") ?>">INSCRIPTION</a></li>
-							<li><a href="<?php echo site_url("user/login") ?>">CONNEXION</a></li>
-							<li><a href="<?php echo site_url("user/members") ?>">RESERVATION</a></li>
-						</ul>
-				</li> -->
+	<div class="top_inner">
 
-			</ul>
+	<div class="top1_wrapper">
+	<div class="top1 inner clearfix">
+	<div class="container">
+
+	<div class="slogan1">Entretien et Renovation de votre vehicule</div>
+
+	<div class="phone1">Phone pour Reservation: <span>0970210694</span></div>
+
+	</div>
+	</div>
+	</div>
+
+	<div class="top2_wrapper">
+	<div class="top2 inner clearfix">
+	<div class="container">
+
+	<header><div class="logo_wrapper"><a href="index.html" class="logo">
+	  <img src="<?= base_url('assets/images/logo.png')?>" alt="" width="380" height="88"></a></div></header>
+
+	<div class="menu_wrapper">
+	<div class="navbar navbar_">
+		<div class="navbar-inner navbar-inner_">
+			<a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+	<!--menu-->
+			<div class="nav-collapse nav-collapse_ collapse">
+				<ul class="nav sf-menu clearfix">
+	<li class="active"><a href="index.html">Accueil</a></li>
+	<li class="sub-menu sub-menu-1"><a href="#">Services</a>
+		<ul>
+			<li><a href="presentation.html">Presentation</a></li>
+			<li><a href="news.html">News</a></li>
+			<li><a href="clients.html">Temoignages</a></li>
+		</ul>
+	<li class="sub-menu sub-menu-1"><a href="#">Nettoyage</a>
+		<ul>
+			<li><a href="carrosserie.html">Carrosserie</a></li>
+			<li><a href="interieurs.html">Interieur</a></li>
+			<li><a href="decalaminage.html">Decalaminage</a></li>
+		</ul>
+	<li><a href="price.html">Tarifs</a></li>
+	<li><a href="photos.html">Gallerie</a></li>
+	<li><a href="contact.html">Contact</a>
+			</div>
+	<!--menu fin--></div>
+	</div>
+	</div>
+
+					</li>
+				</ul>
+			</div>
 		</div>
-	</nav>
-</div>
+	</div>
+	</div>
+
+	</div>
+	</div>
+
+	</div>
+
+	<div class="bot1">
+	<div class="container">
+	<div class="row">
+	<div class="span4">
+
+	<div class="bot1_title"></div>
+
+	</div><div class="container">
+	<div class="hl1"></div>
+	</div>
+
+	<div class="bot1">
+	<div class="container">
+	<div class="row">
+
+	<p align="center">
+	<img border="0" src="<?= base_url('assets/images/partners.png')?>" width="754" height="58"></p>
+	<div class="container">
+	<div class="row">
+	<div class="span4">
+	<div class="bot1_title">Societe</div>
+	<p>Flashy Car Wash.<br>Telephone: 0970210694</p>
+	</div>
+	<div class="span4">
+	<div class="bot1_title">Reseaux Sociaux:</div>
+	<div class="social_wrapper">
+		<ul class="social clearfix">
+		    <li><a href="https://www.facebook.com/flashycarwash/" target="_blank"><img src="images/social_ic3.png" width="44" height="44"></a></li>
+		    <li><a href="https://www.facebook.com/flashycarwash/"><img src="images/social_ic2.png" width="44" height="44"></a></li>
+		    <li><a href="https://www.facebook.com/flashycarwash/" target="_blank"><img src="images/social_ic3.png" width="44" height="44"></a></li>
+		</ul>
+	</div>
+	</div>
+	<div class="span4">
+	<div class="logo2_wrapper"><a href="index.html" class="logo2">
+	  <img src="images/logo2.png" alt="" width="210" height="45"></a></div>
+	<footer><div class="copyright">Copyright Flashy Car Wash @ 2017<p><font size="1">
+	  creation Yadetout-Groupe </font></div></footer>
+	</div>
 
 
-<!-- <section id="account-pop">
-	<div id="c1-account-pop"> <span id="account-arrow"><span class="icon" data-icon="&#xf0d8;" aria-hidden="true"></span></span>
-		<form class="form1 login-form form-validator" id="account-form" action="<?= site_url('main/signup')?>" method="post">
-			<div class="field">
-			<label class="label" for="ident-email">Votre adresse e-mail</label>
-			<input type="text" class="textbox validate[required,custom[email]]" id="ident-email" name="ident_email" value="" placeholder="Tapez votre email..." />
-			<div class="clear1px"></div>
-		</div>
-		<div class="field">
-			<label class="label" for="ident-pwd">Votre mot de passe</label>
-			<input type="password" class="textbox validate[required]" id="ident-pwd" name="ident_pass" placeholder="Tapez votre mot de passe.." />
-			<div class="clear1px"></div>
-		</div>
-		<div class="btn-area"> <p id="pwd-lost"><a class="pwd-lost-a" href="/p/mot-de-passe-oublie.html">J'ai perdu mon mot de passe !</a></p>
-			<button class="button btn4" type="submit" name="btnc">S'identifier</button>
-			<div class="clear1px"></div>
-		</div>
-		<p id="account-create">Ou <a class="button btn2" href="/compte/">Créer un compte maintenant</a></p>
-	</form>
-</div>
-</section> -->
 
-<script type="text/javascript" src="<?= base_url('assets/javascripts/jquery.js') ?>"></script>
-<script type="text/javascript" src="<?= base_url('assets/javascripts/isotope.js') ?>"></script>
-<script type="text/javascript" src="<?= base_url('assets/javascripts/myscript.js') ?>"></script>
-<script type="text/javascript" src="<?= base_url('assets/javascripts/jquery.1.11.js') ?>"></script>
-<script type="text/javascript" src="<?= base_url('assets/javascripts/bootstrap.js') ?>"></script>
+	<div class='topbar banner '>
+	    <div id="top-nav">
+
+
+	        <div class="black-bar">
+	            <div class="logo"><a title='Lingerie'  href='/' ><img
+	                            alt="Lingerie" src="<?= base_url('assets/images/logo.png')?>" height="auto" width="135px"></a></div>
+
+	            <div class="searchbar"><form id="searchbox" method='get' action="/search.php">
+	                    <input id="search" name='q' type="text" placeholder="SEARCH" autocomplete="off">
+	                    <input id="perform-search"  type="submit" value='' >
+	                    <div style="clear:both;"></div>
+	                    <div id='search-dropdown'></div>
+	                </form>
+	            </div>
+	            <div class="top-nav-right">
+	                <ul>
+	                    <li><a href="#"><i class="fa fa-question-circle"></i> HELP</a>
+	                        <ul class="help-dropdown">
+
+	                        </ul>
+	                    </li>
+	                    <li class="top-login">
+	                        <a href="/account"><i class="fa fa-user"></i> Se connecter</a>
+	                    </li>
+	                    <li class="cart"><a href="https://www.yandy.com/cart.php" ><i class="fa fa-shopping-cart"></i> CART <span id="cart-total-quantity"></span></a>
+	                        <ul>
+	                            <li class="minicart-container">
+	                                <i class="fa fa-circle-o-notch fa-spin"></i>
+	                            </li>
+	                        </ul>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+
+
+
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+
+
 </body>
 </html>

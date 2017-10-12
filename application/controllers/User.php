@@ -19,12 +19,15 @@ class User extends CI_Controller {
 	}
 
 	public function signup() {
-		$this->load->view('templates/header');
+		$this->load->view('templates/test');
 		$this->load->view('pages/signup');
+		$this->load->view('templates/footer');
+
 	}
 
   public function signup_validation() {
 		$this->load->library('form_validation');
+
 
 		// set validation rules
 		$this->form_validation->set_rules('username', 'Username', 'trim|required|alpha_numeric|min_length[4]|is_unique[users.username]', array('is_unique' => 'This username already exists. Please choose another one.'));
@@ -53,8 +56,10 @@ class User extends CI_Controller {
    		if ($this->User_model->add_user($username, $email, $password)) {
 
    			// user creation ok
+				$this->load->view('templates/test');
+				$this->load->view('pages/login', $data);
+				$this->load->view('templates/footer');
 
-   			$this->load->view('pages/login', $data);
 
 
    		} else {
@@ -63,7 +68,7 @@ class User extends CI_Controller {
    			$data->error = 'There was a problem creating your new account. Please try again.';
 
    			// send error to the view
-   			$this->load->view('templates/header');
+   			$this->load->view('templates/test');
    			$this->load->view('pages/signup', $data);
    			$this->load->view('templates/footer');
 
@@ -74,13 +79,15 @@ class User extends CI_Controller {
 	}
 
 	public function login() {
-		$this->load->view('templates/header');
+		$this->load->view('templates/test');
     $this->load->view('pages/login');
+		$this->load->view('templates/footer');
+
 
   }
 
 	public function login_validation()
-	{
+	{		$_SESSION['connecte'] = false;
 		   $this->form_validation->set_rules('email', 'Email', 'required|trim|callback_validate_credentials');
 		   $this->form_validation->set_rules('password', 'Password', 'required|md5|trim');
 
@@ -99,6 +106,7 @@ class User extends CI_Controller {
 
             foreach($get_id as $val)
                 {
+											$username = $val->username;
                      $id = $val->id;
                      $email = $val->email;
                      $password = $val->password;
@@ -119,12 +127,14 @@ class User extends CI_Controller {
                      {
 
 											 $data = array(
+											'username' => $username,
 											 'email' => $email,
 											 'password' => $password,
 											 'type'=> $type,
 											 'id'=> $id,
 											 'is_logged_in' => true
                         );
+												$_SESSION['connecte'] = true;
                           $this->session->set_userdata($data); /*Here  setting the  user datas values in session */
                           redirect('user/members');
                      }
@@ -143,10 +153,41 @@ class User extends CI_Controller {
     }
 	}
 
+	public function forgotPassword()
+    {
+        $this->load->view('pages/forgotpswd');
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('email','Email','trim|required|xss_clean|max_length[100]');
+        if($this->form_validation->run())
+        {
+            $email = $this->input->post('users');
+            if($this->User_model->validate($email) != NULL){
+                echo "Le mail de confirmation a été envoyé";
+                $this->email->from('clement.giroud@gmail.com','Admin');
+                $this->email->to($email);
+                $this->email->subject('Mot de passe oublié');
+                $this->email->message('');
+                $this->email->send();
+            }
+            else
+            {
+                echo "login incorrect";
+            }
+        }
+    }
+
   public function members() {
+
+
 		if ($this->session->userdata('is_logged_in')){
-			$this->load->view('templates/header');
-			$this->load->view('pages/members');
+			$this->load->model('User_model');
+			$data['username'] = $this->User_model->get_username();
+
+			$this->load->view('templates/test');
+			$this->load->view('pages/members', $data);
+			$this->load->view('templates/footer');
+
+
 
 		} else {
 			redirect('user/restricted');

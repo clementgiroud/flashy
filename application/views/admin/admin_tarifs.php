@@ -2,27 +2,32 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Admin</title>
+	<title>Admin Tarif</title>
 	<meta name="description" content="FLASHY CAR WASH">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="<?= base_url('assets/stylesheets/bootstrap/bootstrap.css') ?>" rel="stylesheet">
-	<!-- <link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap/bootstrap.css"> -->
-  <link href="<?= base_url('assets/fonts/font-awesome.css') ?>" rel="stylesheet">
-	<link href="<?php echo base_url('assests/stylesheets/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
-	<link href="<?php echo base_url('assests/datatables/css/dataTables.bootstrap.css')?>" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/font-awesome.css') ?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/fontawesome-webfont.ttf') ?>">
-	<link rel="stylesheet" type="text/css" href="style/slider.css">
-  <!-- <link href="<?= base_url('assets/stylesheets/style.css') ?>" rel="stylesheet"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="style/mystyle.css"> -->
-	<script src="<?php echo base_url('assets/jquery/jquery-3.1.0.min.js')?>"></script>
-	<script src="<?php echo base_url('assets/javascripts/bootstrap.min.js')?>"></script>
-	<script src="<?php echo base_url('assets/datatables/js/jquery.dataTables.min.js')?>"></script>
-	<script src="<?php echo base_url('assets/datatables/js/dataTables.bootstrap.js')?>"></script>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?= base_url('assets/stylesheets/admin_style.css')?>" rel="stylesheet">
+
+	<link rel="icon" href="<?= base_url('assets/images/favicon/favicon.ico')?>" type="image/gif">
 </head>
 
 <body>
+
+	<div class="header">
+	     <div class="container_admin">
+	        <div class="row">
+	           <div class="col-md-5">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1>Admin tarif</h1>
+	              </div>
+	           </div>
+
+	        </div>
+	     </div>
+	</div>
 
 	<div class="page-content">
 		<div class="row">
@@ -30,29 +35,36 @@
 			<div class="sidebar content-box" style="display: block;">
 							<ul class="nav">
 									<!-- Main menu -->
-									<li class="current"><a href="<?= site_url('admin')?>"><i class="glyphicon glyphicon-home"></i> Tableau de bord</a></li>
+									<li class="current"><a href="<?= site_url('admin/success')?>"><i class="glyphicon glyphicon-home"></i> Tableau de bord</a></li>
 									<li><a href="<?= site_url('admin/reservation')?>"><i class="glyphicon glyphicon-calendar"></i> Reservation</a></li>
-									<!-- <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li>
-									<li><a href="tables.html"><i class="glyphicon glyphicon-list"></i> Tables</a></li> -->
+									<!-- <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li> -->
+									<li><a href="<?= site_url('gallery')?>"><i class="glyphicon glyphicon-list"></i> Galerie</a></li>
 									<!-- <li><a href="buttons.html"><i class="glyphicon glyphicon-record"></i> Buttons</a></li> -->
 									<li><a href="<?= site_url('admin/tarifs')?>"><i class="glyphicon glyphicon-pencil"></i> Tarifs</a></li>
-									<li><a href='<?php echo site_url("user/logout") ?>'>Déconnexion</a></li>
-									<!-- <li><a href="forms.html"><i class="glyphicon glyphicon-tasks"></i> Forms</a></li> -->
 									<li><a href="<?= site_url('admin/compte')?>"><i class="glyphicon glyphicon-tasks"></i> Compte utilisateur</a></li>
-
+									<li><a href="<?= site_url('user/logout')?>"><i class="glyphicon glyphicon-log-out"></i> Déconnexion</a></li>
+									
 							</ul>
 					 </div>
 		</div>
 
 
+
+
+			<div class="content-box-large">
+				<h1> Tarifs	 </h1>
+
+			</div>
+
+
   <div class="container">
     <!-- <h1>Bienvenue sur la page d'administration</h1><a href='<?php echo site_url("user/logout") ?>'>Déconnexion</a> -->
 </center>
-    <h3>Tarifs</h3>
+
     <br/><br/><br/><br/><br/>
     <button class="btn btn-success" onclick="add_tarif()"><i class="glyphicon glyphicon-plus"></i> Ajouter tarifs</button>
     <br />
-    <br />
+
     <table id="table_id" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
         <tr>

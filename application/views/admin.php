@@ -77,7 +77,7 @@
                     <li><a href="<?= site_url('admin/tarifs')?>"><i class="glyphicon glyphicon-pencil"></i> Tarifs</a></li>
                     <!-- <li><a href="forms.html"><i class="glyphicon glyphicon-tasks"></i> Forms</a></li> -->
                 </ul>
-             </div>
+        </div>
 		  </div>
 		  <!-- <div class="col-md-10"> -->
 		  	<!-- <div class="row">
@@ -161,6 +161,18 @@
 		  <!-- </div> -->
 		</div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
   </body>
 </html>

@@ -3,6 +3,8 @@
  <head>
    <meta charset="utf-8">
    <title>Contact success</title>
+   <link rel="icon" href="<?= base_url('assets/images/flashy.ico')?>" type="image/gif">
+   
  </head>
  <body>
 

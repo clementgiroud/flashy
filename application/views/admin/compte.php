@@ -2,32 +2,14 @@
 <html>
   <head>
     <title>Admin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- jQuery UI -->
-    <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
+    <meta name="description" content="FLASHY CAR WASH">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  	<link href="<?= base_url('assets/stylesheets/admin_style.css')?>" rel="stylesheet">
 
-    <!-- Bootstrap -->
-    <link href="<?= base_url('assets/stylesheets/bootstrap/bootstrap.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/datatables/css/dataTables.bootstrap.css')?>" rel="stylesheet">
-    <link href="<?= base_url('assets/stylesheets/bootstrap/bootstrap.min.css')?>" rel="stylesheet">
-    <!-- styles -->
-    <link href="<?= base_url('assets/stylesheets/admin_style.css')?>" rel="stylesheet">
-
-
-    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/font-awesome.css') ?>">
-  	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/fontawesome-webfont.ttf') ?>">
-    <link href="<?= base_url('assets/stylesheets/forms.css')?>" rel="stylesheet">
-    <script src="<?php echo base_url('assets/jquery/jquery-3.1.0.min.js')?>"></script>
-  	<script src="<?php echo base_url('assets/javascripts/bootstrap.min.js')?>"></script>
-  	<script src="<?php echo base_url('assets/datatables/js/jquery.dataTables.min.js')?>"></script>
-  	<script src="<?php echo base_url('assets/datatables/js/dataTables.bootstrap.js')?>"></script>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+  	<link rel="icon" href="<?= base_url('assets/images/favicon/favicon.ico')?>" type="image/gif">
   </head>
   <body>
   	<div class="header">
@@ -45,25 +27,27 @@
 	     </div>
 	</div>
 
-    <div class="page-content">
-    	<div class="row">
-		  <div class="col-md-2">
-		  	<div class="sidebar content-box" style="display: block;">
-                <ul class="nav">
-                    <!-- Main menu -->
-                    <li class="current"><a href="<?= site_url('admin/success')?>"><i class="glyphicon glyphicon-home"></i> Tableau de bord</a></li>
-                    <li><a href="<?= site_url('admin/reservation')?>"><i class="glyphicon glyphicon-calendar"></i> Reservation</a></li>
-                    <!-- <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li> -->
-                    <!-- <li><a href="tables.html"><i class="glyphicon glyphicon-list"></i> Tables</a></li> -->
-                    <!-- <li><a href="buttons.html"><i class="glyphicon glyphicon-record"></i> Buttons</a></li> -->
-                    <li><a href="<?= site_url('admin/tarifs')?>"><i class="glyphicon glyphicon-pencil"></i> Tarifs</a></li>
-                    <li><a href="<?= site_url('admin/compte')?>"><i class="glyphicon glyphicon-tasks"></i> Compte utilisateur</a></li>
+  <div class="page-content">
+    <div class="row">
+    <div class="col-md-2">
+      <div class="sidebar content-box" style="display: block;">
+              <ul class="nav">
+                  <!-- Main menu -->
+                  <li class="current"><a href="<?= site_url('admin/success')?>"><i class="glyphicon glyphicon-home"></i> Tableau de bord</a></li>
+                  <li><a href="<?= site_url('admin/reservation')?>"><i class="glyphicon glyphicon-calendar"></i> Reservation</a></li>
+                  <!-- <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li> -->
+                  <li><a href="<?= site_url('gallery')?>"><i class="glyphicon glyphicon-list"></i> Galerie</a></li>
+                  <!-- <li><a href="buttons.html"><i class="glyphicon glyphicon-record"></i> Buttons</a></li> -->
+                  <li><a href="<?= site_url('admin/tarifs')?>"><i class="glyphicon glyphicon-pencil"></i> Tarifs</a></li>
+                  <li><a href="<?= site_url('admin/compte')?>"><i class="glyphicon glyphicon-tasks"></i> Compte utilisateur</a></li>
+                  <li><a href="<?= site_url('user/logout')?>"><i class="glyphicon glyphicon-log-out"></i> Déconnexion</a></li>
+                  
+              </ul>
+           </div>
+    </div>
+    <div class="content-box-large">
+      <h1> Comptes utilisateurs </h1>
 
-                </ul>
-        </div>
-		  </div>
-
-      </div>
     </div>
 
 
@@ -300,6 +284,6 @@
 
 
 
-    
+
   </body>
 </html>

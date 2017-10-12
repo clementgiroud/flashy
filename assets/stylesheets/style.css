@@ -6,7 +6,11 @@ body{
 
 /*ACCUEIL*/
 
-
+.audio{
+	float: left;
+	position: relative;
+	display: inline;
+}
 
 /*FIN ACCUEIL*/
 
@@ -147,6 +151,9 @@ combo-simplifie…ss&0.1.4129:16
 		border-radius: 5px;
 }
 /*FIN FORMULAIRE CONTACT*/
+
+
+
 
 
 .allcontain{
@@ -392,7 +399,7 @@ padding-left: 5%;
   /*border-bottom: 2px solid #C59E47;*/
 }
 
-/*PAGE LOGIN et SIGNUP*/
+/*PAGE LOGIN SIGNUP CONTACT*/
 
 #container_login{
 	background-color: black;
@@ -409,8 +416,225 @@ body.signup{
 	background-color: black;
 	color: white;
 }
+#container-contact{
+	background-color: black;
+}
+body.contact{
+	background-color: black;
+	color: white;
+}
 
-/*FIN PAGE LOGIN et SIGNUPs*/
+/*FIN PAGE LOGIN SIGNUP CONTACT*/
+
+/*PAGE NOS PLUS*/
+
+#container-nosplus{
+	background-color: black;
+	list-style-type: none;
+	display: block;
+
+
+}
+body.nosplus{
+	background-color: black;
+	color: white;
+}
+
+
+.video{
+height: 256px;
+width:326px;
+
+padding:0;
+float: left;
+}
+
+.power{
+height: 256px;
+width:578px;
+margin:0 auto 0 auto;*/
+padding:0;
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						float: right;
+}
+
+.hydro{
+height: 256px;
+width:326px;
+margin:0 auto 0 auto;
+margin-left: 20px;
+padding:0;
+float: left;
+}
+.hydro.p{
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.video-plate{
+height: 256px;
+width:578px;
+margin:0 auto 0 auto;
+padding:0;
+float: right;
+}
+
+/*FIN PAGE NOS PLUS*/
+
+/*PAGE GALLERIE*/
+
+@media (max-width: 600px) {
+  .contentBox{
+    width: 50%;
+  }
+}
+
+ //All this keeps everything lined up
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+body, html{
+  height: 100%;
+  margin: 0px;
+  background-color:#000;
+}
+
+/* ========Grid Style======================*/
+//The design for the grid
+.center{
+  text-align: center;
+}
+
+.content{
+  text-align: center;
+}
+.contentBox{
+  font-family: Oswald, sans-serif;
+  font-weight: 300;
+  background-color:$fourthColor;
+  border: 1px solid $fifthColor;
+  width: $boxWidth;
+  height: $boxHeight;
+
+  box-shadow: 5px 5px 20px 2px #111111;
+  padding: 0px;
+  margin: $boxMargin;
+  margin-top: 10px;
+  /*Vertical align helps keep the boxes vertically aligned*/
+  vertical-align: top;
+  display:inline-block;
+}
+
+//For the captions over the pictures
+.boxCover{
+  position: relative;
+  top: 60%;
+  height: 40%;
+  width: 100%;
+  background-color:#fff;
+  opacity: 0;
+}
+
+
+
+
+/*======Button Functionality Code======*/
+.animate{
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+.contentBox:hover{
+  border: 1px solid $fourthColor;
+}
+
+//*=====Clearfix Hack=======*///
+/*
+Clearfix hack curtosy of
+OddlyTimbot (my prof)
+codepen.io/team/OddlyTimbot
+*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/* ===========Template Style====================== */
+//This is just design for the title, subtitle, and caption styling
+
+.title{
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.3)), $primaryColor;
+
+  border: 1px solid $fifthColor;
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+  border-left-style: none;
+  border-right-style: none;
+
+  padding-top: 3px;
+  padding-bottom: 3px;
+  /*Text Design-----*/
+  color: #FFFFFF;
+  text-shadow:
+    1px 1px $secondaryColor,
+    2px 2px $secondaryColor,
+    3px 3px $secondaryColor,
+    4px 4px $secondaryColor;
+
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+.subtitle{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 1.4em;
+  color: #fff;
+  text-align: center;
+  margin: 10px;
+}
+.caption{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1.1em;
+  color: black;
+  text-align: left;
+  padding: 5px;
+}
+.horizontalLine{
+  background-color: $secondaryColor;
+  padding-bottom:1px;
+  padding-top:1px;
+  padding: 1px;
+}
+.top{
+  margin-top:15px;
+}
+.bottom{
+  margin-bottom:3px;
+}
+.credits{
+  position:relative;
+   font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+  color: #999999;
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+
+/*FIN PAGE GALLERIE*/
 
 /*PAGE ADMIN*/
 
