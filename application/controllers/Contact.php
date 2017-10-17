@@ -1,6 +1,7 @@
 <?php
 
 class Contact extends CI_Controller {
+
  public function index()
  {
 
@@ -32,8 +33,10 @@ class Contact extends CI_Controller {
      }
    else
      {
- $this->load->view('templates/header');
+ $this->load->view('templates/test');
  $this->load->view('pages/contact');
+ $this->load->view('templates/footer');
+
      }
 }
 

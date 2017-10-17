@@ -87,11 +87,12 @@ class User extends CI_Controller {
   }
 
 	public function login_validation()
-	{		$_SESSION['connecte'] = false;
+	{
 		   $this->form_validation->set_rules('email', 'Email', 'required|trim|callback_validate_credentials');
 		   $this->form_validation->set_rules('password', 'Password', 'required|md5|trim');
 
 		   if ($this->form_validation->run()) {
+				 $_SESSION['connecte'] = FALSE;
 		 		$data = array(
 		 			'email' => $this->input->post('email'),
 		 			'is_logged_in' => 1
@@ -120,6 +121,7 @@ class User extends CI_Controller {
                         'id'=> $id,
                         'is_logged_in' => true
                         );
+												$_SESSION['connecte'] = true;
                           $this->session->set_userdata($data); /*Here  setting the Admin datas in session */
                           redirect('admin/success');
                      }

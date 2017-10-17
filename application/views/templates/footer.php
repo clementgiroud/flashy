@@ -21,78 +21,6 @@
 
 	<body>
 
-
-
-
-
-		<footer class="footer-distributed">
-
-
-
-
-			<!-- <div class="footer-left"> -->
-
-
-
-				<!-- <p class="footer-links">
-					<a href="<?= site_url('main'); ?>">Accueil</a>
-					·
-					<a href="<?= site_url("tarifs/viewcarte") ?>">Tarifs</a>
-					·
-					<a href="<?= site_url("main/services") ?>">Nos plus</a>
-					·
-					<a href="<?= site_url("contact") ?>">Contact</a>
-				</p> -->
-
-
-			<!-- </div> -->
-
-			<!-- <div class="footer-center">
-
-				<div>
-					<i class="fa fa-map-marker"></i>
-					<p><span>ZAE VIA EUROPA EST</span> 1 Avenue de Rome</p>
-          <p>Bâtiment les cassis local 3</p>
-          <p>34350 VENDRES</p>
-				</div>
-
-				<div>
-					<i class="fa fa-phone"></i>
-					<p>standart : 09.70.21.06.94</p>
-          <p>David : 0625771199</p>
-				</div>
-
-				<div>
-					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com">mydavidferrer34@gmail.com</a></p>
-				</div>
-
-			</div>
-
-			<div class="footer-right">
-
-
-
-				<div class="footer-icons">
-
-					<a href="https://www.facebook.com/flashycarwash/"<i class="fa fa-facebook fa-lg"></i></a>
-
-
-				</div>
-
-			</div>
-			<div id="copywrite">
-				<div class="side1">
-					<p><img border="0" src="<?= base_url('assets/images/partners.png')?>" width="754" height="58"></p><br/><br/><br/><br/><br/>
-					<br/><p>© Flashy Car Wash</p>
-				</div>
-			</div>
-
-
-		</footer> -->
-
-
-
 		<div class='footer'>
 			<div class="marque">
 			  <img border="0" src="<?= base_url('assets/images/partners.png')?>" width="754" height="58">
@@ -103,12 +31,7 @@
 		<div id="footer-new">
 		  <div class="footerwrap-new">
 
-		    <br/><div id="footer-signup">
-					<Fieldset>Newsletter</fieldset>
-		       <input id="email-name" type="text" name="email" placeholder="Votre adresse mail" />
-		      <i class="fa fa-check" id="email-name-check" style="margin-left:7px"></i>
-		      <br/><div id="footer-email-response"></div>
-		    </div><br/><br/>
+		    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://widget.mailjet.com/d111fe457d62de188c72f127cf0ebaefd0e168cf.html" width="260" height="160"></iframe>
 
 		  </div>
 		              <div id="footer-nav-new">

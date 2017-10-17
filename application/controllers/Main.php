@@ -6,11 +6,12 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
+
 		$this->load->helper('url');
 		// $this->load->view('templates/header');
 		$this->load->view('templates/test', $_SESSION);
 		$this->load->model('Gallery_model');
-		$data['images']=$this->Gallery_model->getAll_images();
+		$data['slides']=$this->Gallery_model->getAll_slide();
 		$this->load->view('pages/home', $data);
 		$this->load->view('templates/footer');
 	}

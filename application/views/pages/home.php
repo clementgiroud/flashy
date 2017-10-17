@@ -21,7 +21,7 @@
 <section id="slideshow">
   <div class="container">
    <div class="w3-content w3-section" style="">
-     <?php foreach ($images as  $img):?>
+     <?php foreach ($slides as  $img):?>
    <img class="mySlides" src="<?= base_url($img->file)?>" style="width:100%">
     <?php endforeach; ?>
  </div>

@@ -9,7 +9,7 @@
   <link href="<?= base_url('assets/stylesheets/bootstrap/bootstrap.css') ?>" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="icon" href="<?= base_url('assets/images/favicon/favicon.ico')?>" type="image/gif">
+	<link rel="icon" href="<?= base_url('assets/images/favicon/flashy.ico')?>" type="image/gif">
 
   <link href="<?= base_url('assets/fonts/font-awesome.css') ?>" rel="stylesheet">
 	<link href="<?php echo base_url('assests/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
@@ -43,11 +43,11 @@
                     <li><a href="<?= site_url('admin/reservation')?>"><i class="glyphicon glyphicon-calendar"></i> Reservation</a></li>
                     <!-- <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li> -->
                     <li><a href="<?= site_url('gallery')?>"><i class="glyphicon glyphicon-list"></i> Galerie</a></li>
-                    <!-- <li><a href="buttons.html"><i class="glyphicon glyphicon-record"></i> Buttons</a></li> -->
+                    <li><a href="<?= site_url('gallery/slide')?>"><i class="glyphicon glyphicon-record"></i> Slider</a></li>
                     <li><a href="<?= site_url('admin/tarifs')?>"><i class="glyphicon glyphicon-pencil"></i> Tarifs</a></li>
                     <li><a href="<?= site_url('admin/compte')?>"><i class="glyphicon glyphicon-tasks"></i> Compte utilisateur</a></li>
 										<li><a href="<?= site_url('user/logout')?>"><i class="glyphicon glyphicon-log-out"></i> Déconnexion</a></li>
-										
+
                 </ul>
              </div>
 		  </div>
