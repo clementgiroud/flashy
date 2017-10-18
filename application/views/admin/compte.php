@@ -7,8 +7,9 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
   	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url('assets/stylesheets/bootstrap/bootstrap.min.css')?>" rel="stylesheet">
   	<link href="<?= base_url('assets/stylesheets/admin_style.css')?>" rel="stylesheet">
-
+    <link href="<?= base_url('assets/datatables/css/dataTables.bootstrap.css')?>">
   	<link rel="icon" href="<?= base_url('assets/images/favicon/flashy.ico')?>" type="image/gif">
   </head>
   <body>
@@ -53,7 +54,7 @@
 
 
         <div class="container">
-          <!-- <h1>Bienvenue sur la page d'administration</h1><a href='<?php echo site_url("user/logout") ?>'>Déconnexion</a> -->
+
       </center>
 
           <br/><br/><br/><br/><br/>
@@ -110,24 +111,19 @@
         </div>
 
 
-        <script src="<?php echo base_url('assests/jquery/jquery-3.1.0.min.js')?>"></script>
-        <script src="<?php echo base_url('assests/javascripts/bootstrap.min.js')?>"></script>
-        <script src="<?php echo base_url('assests/jquery/jquery.dataTables.min.js')?>"></script>
-        <script src="<?php echo base_url('assests/datatables/js/dataTables.bootstrap.js')?>"></script>
+        <script src="<?php echo base_url('assets/jquery/jquery-3.1.0.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/javascripts/bootstrap.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/jquery/jquery.dataTables.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/datatables/js/dataTables.bootstrap.js')?>"></script>
 
 
 
         <script type="text/javascript">
-        $(document).ready( function () {
-
-            $('#table_id').DataTable({
-                "language": {
-                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
-                }
-            });
-        } );
-          var save_method; //for save method string
-          var table;
+  $(document).ready( function () {
+      $('#table_id').DataTable();
+  } );
+    var save_method; //for save method string
+    var table;
 
 
           function add_user()
@@ -135,7 +131,7 @@
             save_method = 'add';
             $('#form')[0].reset(); // reset form on modals
             $('#modal_form').modal('show'); // show bootstrap modal
-            $('.modal-title').text('Utilisateurs'); // Set Title to Bootstrap modal title
+            $('.modal-title').text('Ajouter un utilisateur'); // Set Title to Bootstrap modal title
           }
 
           function edit_user(id)
@@ -159,7 +155,7 @@
 
 
                   $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
-                  $('.modal-title').text('Utilisateurs'); // Set title to Bootstrap modal title
+                  $('.modal-title').text("Mettre à jour l'utilisateur"); // Set title to Bootstrap modal title
 
               },
               error: function (jqXHR, textStatus, errorThrown)

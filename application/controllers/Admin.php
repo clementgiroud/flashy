@@ -24,17 +24,15 @@ class Admin extends CI_Controller {
 	 		parent::__construct();
 			$this->load->helper('url');
 	 		$this->load->model('Admin_model');
-			// $this->load->library('form_validation','session');
-			// $this->load->library('Image_crud');
+			$this->load->library('form_validation','session');
 
 	 	}
 
-
-
-
 	public function index()
 	{
-		$this->load->view('admin/restricted');
+		// $this->load->view('admin/restricted');
+		$data['compte']=$this->Admin_model->get_all_user();
+		$this->load->view('admin/compte',$data);
 
 	}
 
@@ -47,8 +45,6 @@ class Admin extends CI_Controller {
 		$data['compte']=$this->Admin_model->get_all_user();
 		$this->load->view('admin/compte',$data);
 	}
-
-
 
 	public function create_user()
 	{
@@ -141,26 +137,7 @@ class Admin extends CI_Controller {
 		echo json_encode(array("status" => TRUE));
 	}
 
-	// public function galerie()
-	// {
-	// 	$data['galerie']=$this->Galerie_model->all();
-	// 		$this->load->view('admin/admin_galerie',$data);
-	//
-	// 		$data = [
-  //        'images'   => $this->Galerie_model->all()
-  //     ];
 
-			// $c = new image_CRUD();
-
-// $c->set_table('galerie');
-//
-// $c->set_url_field('url');
-// $c->set_title_field('title');
-// $c->set_ordering_field('order');
-// $c->set_image_path('uploads');
-//
-// $output = $c->render();
-	// }
 
 
 

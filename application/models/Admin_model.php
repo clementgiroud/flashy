@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin_model extends CI_Model
 {
 
-  var $new_user = 'users';
+  var $table = 'users';
 
   public function __construct()
 	{
 		parent::__construct();
-
+      $this->load->database();
 	}
 
   public function get_all_user()
@@ -19,9 +19,21 @@ class Admin_model extends CI_Model
   return $query->result();
   }
 
+  public function create_user($data)
+  {
+    $this->db->insert($this->table, $data);
+    return $this->db->insert_id();
+  }
+
+  public function user_update($where, $data)
+  {
+    $this->db->update($this->table, $data, $where);
+    return $this->db->affected_rows();
+  }
+  
   public function get_by_id($id)
 	{
-		$this->db->from($this->new_user);
+		$this->db->from($this->table);
 		$this->db->where('id',$id);
 		$query = $this->db->get();
 
@@ -31,7 +43,7 @@ class Admin_model extends CI_Model
   public function delete_user_by_id($id)
 	{
 		$this->db->where('id', $id);
-		$this->db->delete($this->new_user);
+		$this->db->delete($this->table);
 	}
 
   public function checkUser($email, $password)
@@ -69,17 +81,6 @@ class Admin_model extends CI_Model
 
 	}
 
-  public function create_user($data)
-	{
-		$this->db->insert($this->new_user, $data);
-		return $this->db->insert_id();
-	}
-
-  public function user_update($where, $data)
-	{
-		$this->db->update($this->new_user, $data, $where);
-		return $this->db->affected_rows();
-	}
 
   public function get_all_galerie()
   {

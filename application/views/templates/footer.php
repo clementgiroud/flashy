@@ -22,9 +22,9 @@
 	<body>
 
 		<div class='footer'>
-			<div class="marque">
+			<!-- <div class="marque">
 			  <img border="0" src="<?= base_url('assets/images/partners.png')?>" width="754" height="58">
-		  </div>
+		  </div> -->
 		<input type='hidden' id='image-cdn'  cdn='//assets.yandycdn.com' scdn='https://assets.yandycdn.com'>
 		<input type='hidden' id='domainname'  domain='http://www.yandy.com' sdomain='https://www.yandy.com'>
 		<input type='hidden' id='pre-load' value='false'>

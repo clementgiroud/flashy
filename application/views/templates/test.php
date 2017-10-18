@@ -85,17 +85,13 @@
 								</ul><?php
               }?>
 
-
-
-
-
-	                        <!-- <a href="/account"><i class="fa fa-user"></i> Se connecter</a> -->
-
 	                    </li>
 	                </ul>
 	            </div>
 	        </div>
 	    </div>
+
+		
 			<div class="navbar-header navbar-left">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
@@ -103,12 +99,14 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-			</div>
+
+				</div>
+
 
       <div id="navigation" class="banner">
         <ul class="nav clearfix animated">
 
-          <li nav-id="19">
+          <li class="active" nav-id="19">
             <a href="<?= site_url('main'); ?>" >
                 <h1>ACCUEIL</h1>
             </a>
