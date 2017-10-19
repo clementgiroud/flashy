@@ -19,7 +19,7 @@ class User extends CI_Controller {
 	}
 
 	public function signup() {
-		$this->load->view('templates/test');
+		$this->load->view('templates/header');
 		$this->load->view('pages/signup');
 		$this->load->view('templates/footer');
 
@@ -56,7 +56,7 @@ class User extends CI_Controller {
    		if ($this->User_model->add_user($username, $email, $password)) {
 
    			// user creation ok
-				$this->load->view('templates/test');
+				$this->load->view('templates/header');
 				$this->load->view('pages/login', $data);
 				$this->load->view('templates/footer');
 
@@ -68,7 +68,7 @@ class User extends CI_Controller {
    			$data->error = 'There was a problem creating your new account. Please try again.';
 
    			// send error to the view
-   			$this->load->view('templates/test');
+   			$this->load->view('templates/header');
    			$this->load->view('pages/signup', $data);
    			$this->load->view('templates/footer');
 
@@ -79,7 +79,7 @@ class User extends CI_Controller {
 	}
 
 	public function login() {
-		$this->load->view('templates/test');
+		$this->load->view('templates/header');
     $this->load->view('pages/login');
 		$this->load->view('templates/footer');
 
@@ -185,7 +185,7 @@ class User extends CI_Controller {
 			$this->load->model('User_model');
 			$data['username'] = $this->User_model->get_username();
 
-			$this->load->view('templates/test');
+			$this->load->view('templates/header');
 			$this->load->view('pages/members', $data);
 			$this->load->view('templates/footer');
 

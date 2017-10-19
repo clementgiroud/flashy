@@ -9,9 +9,9 @@ class Main extends CI_Controller {
 
 		$this->load->helper('url');
 		// $this->load->view('templates/header');
-		$this->load->view('templates/test', $_SESSION);
+		$this->load->view('templates/header', $_SESSION);
 		$this->load->model('Gallery_model');
-		$data['slides']=$this->Gallery_model->getAll_slide();
+		$data['slides']=$this->Gallery_model->slide();
 		$this->load->view('pages/home', $data);
 		$this->load->view('templates/footer');
 	}
@@ -42,20 +42,20 @@ class Main extends CI_Controller {
 
 	public function tarif()
 	{
-		$this->load->view('templates/test');
+		$this->load->view('templates/header');
 		$this->load->view('pages/tarifs');
 	}
 
 	public function services()
 	{
-		$this->load->view('templates/test');
+		$this->load->view('templates/header');
 		$this->load->view('pages/services');
 		// $this->load->view('templates/footer');
 
 	}
 	public function nettoyage()
 	{
-		$this->load->view('templates/test');
+		$this->load->view('templates/header');
 		$this->load->view('pages/nettoyage');
 	}
 

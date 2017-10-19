@@ -19,6 +19,11 @@ class Gallery_model extends CI_Model {
 
 	public function getAll_slide()
 	{
+		$result = $this->db->get('slide');
+		return $result;
+	}
+	public function slide()
+	{
 		$query = $this->db->get('slide');
 
 

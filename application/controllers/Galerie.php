@@ -15,7 +15,7 @@ class Galerie extends CI_Controller {
 	{
 		$this->load->model('Gallery_model');
 		$data['images']=$this->Gallery_model->getAll_images();
-		$this->load->view('templates/test', $data);
+		$this->load->view('templates/header', $data);
 
 		$this->load->view('pages/galerie', $data);
 	}
