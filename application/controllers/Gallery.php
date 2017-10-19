@@ -13,10 +13,14 @@ class Gallery extends CI_Controller {
 
 	public function index()
 	{
-		$data = [
+		if ($this->session->userdata('is_logged_in')):
+			$data = [
 			'images'	=> $this->Gallery_model->all()
-		];
-		$this->load->view('gallery/index', $data);
+			];
+			$this->load->view('gallery/index', $data);
+		else:
+			redirect('main');
+		endif;
 	}
 
 	public function add(){
@@ -69,7 +73,7 @@ class Gallery extends CI_Controller {
                     			'description'	=> set_value('description')
                     		];
                     $this->Gallery_model->create($data);
-					$this->session->set_flashdata('message','New image has been added..');
+					$this->session->set_flashdata('message','Une nouvelle image a été ajoutée');
 					redirect('gallery');
             }
 		}
@@ -128,7 +132,7 @@ class Gallery extends CI_Controller {
 			$data['description']	= set_value('description');
 
 			$this->Gallery_model->update($id,$data);
-			$this->session->set_flashdata('message','New image has been updated..');
+			$this->session->set_flashdata('message','Une image a été mise à jour');
 			redirect('gallery');
 		}
 	}
@@ -137,7 +141,7 @@ class Gallery extends CI_Controller {
 	public function delete($id)
 	{
 		$this->Gallery_model->delete($id);
-		$this->session->set_flashdata('message','Image has been deleted..');
+		$this->session->set_flashdata('message',"L'image a été supprimée");
 		redirect('gallery');
 	}
 
@@ -145,8 +149,12 @@ class Gallery extends CI_Controller {
 	// SLIDER
 	public function slide()
 	{
-		$data['slides']=$this->Gallery_model->getAll_slide();
-		$this->load->view('gallery/slide', $data);
+		if ($this->session->userdata('is_logged_in')):
+			$data['slides']=$this->Gallery_model->getAll_slide();
+			$this->load->view('gallery/slide', $data);
+		else:
+			redirect('main');
+		endif;
 	}
 
 	public function add_slide(){
@@ -199,7 +207,7 @@ class Gallery extends CI_Controller {
                     			'description'	=> set_value('description')
                     		];
                     $this->Gallery_model->create_slide($data);
-					$this->session->set_flashdata('message','New image has been added..');
+					$this->session->set_flashdata('message','Une nouvelle image a été ajoutée');
 					redirect('gallery/slide');
             }
 		}
@@ -258,7 +266,7 @@ class Gallery extends CI_Controller {
 			$data['description']	= set_value('description');
 
 			$this->Gallery_model->update_slide($id,$data);
-			$this->session->set_flashdata('message','New image has been updated..');
+			$this->session->set_flashdata('message',"L'image a été mise à jour");
 			redirect('gallery/slide');
 		}
 	}
@@ -267,7 +275,7 @@ class Gallery extends CI_Controller {
 	public function delete_slide($id)
 	{
 		$this->Gallery_model->delete_slide($id);
-		$this->session->set_flashdata('message','Image has been deleted..');
+		$this->session->set_flashdata('message',"L'image a été supprimée");
 		redirect('gallery/slide');
 	}
 }

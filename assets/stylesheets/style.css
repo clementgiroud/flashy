@@ -719,3 +719,24 @@ h3.ht{
 
 
 /*FIN ESPACE PERSO*/
+
+/*GALERIE*/
+
+@media screen and (min-width: 540px) and (max-width: 800px) {
+       ul.least-gallery>li{
+        width: 33.333%;
+        float:left;
+       }
+    }
+
+@media screen and (max-width: 540px) {
+       ul.least-gallery>li{
+        width: 100%;
+        /*display: inline-block;
+				text-align: center;*/
+
+       }
+    }
+
+
+/*FIN GALERIE*/

@@ -36,10 +36,10 @@
               <?php
 
               if(!empty($_SESSION['connecte']))
-              {
-                echo '<a href="logout">Se deconnecter</a>';?>
+              {?>
+                <a href="<?= site_url('user/logout')?>" >Déconnexion</a>
 								<ul>
-									<li class="login"> <span class="h2"><h3>Bienvenue <?php print_r($this->session->username);?></h3></span>
+									<li class="login"> <span class="h2"><h3>Bienvenue <?php print_r($this->session->email);?></h3></span>
 										<?php
 										echo form_open('user/login_validation');
 
@@ -58,8 +58,9 @@
 								</ul><?php
 
 
-              }else {
-                echo '<a href="user/login">Se connecter</a>';?>
+              }else {?>
+								<a href="<?= site_url('user/login')?>" >S</a>
+
 								<ul>
 									<li class="login"> <span class="h2">Connexion</span>
 										<?php
@@ -76,7 +77,7 @@
 										echo '</fieldset>';
 										echo '<fieldset id="actions">';
 											echo '<input type="submit" id="submit" value="Valider">';
-										echo '</fieldset> <span class="h4">Pas encore inscrit ? <a href="user/signup">Créer un compte</a></span>';
+										echo '</fieldset> <span class="h4">Pas encore inscrit ? <a href="index.php/user/signup">Créer un compte</a></span>';
 										echo '<p style="margin-top:6px;" class="pointer yandypink" id="lost-password" ><a href="index.php/user/forgotPassword">Mot de passe oublié ?</a></p>';
 									echo '</form> <br>';
 									echo form_close();

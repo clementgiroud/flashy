@@ -165,7 +165,7 @@ class User extends CI_Controller {
             $email = $this->input->post('users');
             if($this->User_model->validate($email) != NULL){
                 echo "Le mail de confirmation a été envoyé";
-                $this->email->from('clement.giroud@gmail.com','Admin');
+                $this->email->from('','Admin');
                 $this->email->to($email);
                 $this->email->subject('Mot de passe oublié');
                 $this->email->message('');
@@ -213,8 +213,10 @@ class User extends CI_Controller {
 	}
 
 	public function logout() {
+		$this->session->unset_userdata('is_logged_in');
+		$this->session->set_flashdata('success', 'Vous êtes désormais déconnecté(e).');
 		$this->session->sess_destroy();
-		redirect('main');
+		redirect('main', 'refresh');
 	}
 
 

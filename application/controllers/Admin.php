@@ -31,19 +31,29 @@ class Admin extends CI_Controller {
 	public function index()
 	{
 		// $this->load->view('admin/restricted');
-		$data['compte']=$this->Admin_model->get_all_user();
-		$this->load->view('admin/compte',$data);
+		echo("Vous ne pouvez accéder à cette page");
+		$data = $this->session->set_flashdata('alert', 'Cette page est protégée par un mot de passe.').redirect('main');
+
+        return $data;
 
 	}
 
 	public function success()
 	{
-		$this->load->view('admin/admin');
+		if ($this->session->userdata('is_logged_in')):
+			$this->load->view('admin/admin');
+		else:
+			redirect('main');
+		endif;
 	}
 
 	public function compte(){
-		$data['compte']=$this->Admin_model->get_all_user();
-		$this->load->view('admin/compte',$data);
+		if ($this->session->userdata('is_logged_in')):
+			$data['compte']=$this->Admin_model->get_all_user();
+			$this->load->view('admin/compte',$data);
+		else:
+			redirect('main');
+		endif;
 	}
 
 	public function create_user()
@@ -90,13 +100,21 @@ class Admin extends CI_Controller {
 
 	public function tarifs()
 	{
-		$data['tarif']=$this->Members_model->get_all_tarif();
+		if ($this->session->userdata('is_logged_in')):
+			$data['tarif']=$this->Members_model->get_all_tarif();
 			$this->load->view('admin/admin_tarifs',$data);
+		else:
+			redirect('main');
+		endif;
 	}
 
 	public function reservation()
 	{
-			$this->load->view('admin/calendrier');
+			if ($this->session->userdata('is_logged_in')):
+				$this->load->view('admin/calendrier');
+			else:
+				redirect('main');
+			endif;
 	}
 
 
