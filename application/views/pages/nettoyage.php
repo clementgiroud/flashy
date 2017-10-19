@@ -1,1 +1,18 @@
-<iframe src="https://calendar.google.com/calendar/embed?src=pereirachristophe.devweb%40gmail.com&ctz=Europe/Paris" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Accueil</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="<?= base_url('assets/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/bootstrap/css/style.css') ?>" rel="stylesheet">
+  <link rel="icon" href="<?= base_url('assets/images/flashy.ico')?>" type="image/gif">
+</head>
+
+
+
+<body>
+
+  <div id="decalaminage">
+    <img src="<?= base_url('assets/images/decalaminage.jpg')?>">
+  </div>

@@ -59,7 +59,7 @@
 
 
               }else {?>
-								<a href="<?= site_url('user/login')?>" >S</a>
+								<a href="<?= site_url('user/login')?>" >Se Connecter</a>
 
 								<ul>
 									<li class="login"> <span class="h2">Connexion</span>
