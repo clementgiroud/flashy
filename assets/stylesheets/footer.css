@@ -106,7 +106,7 @@ footer{
 }
 
 .side1 p {
-    color: #E60EB8;
+    color: #FF0088;
     /*position: absolute;*/
     top: 35%;
     width: 100%;
@@ -164,4 +164,23 @@ h5{
 }
 div.marque{
 	text-align: center;
+}
+@media screen and (max-width: 1024px){
+	div.marque{
+		width: 60%;
+		height: auto;
+		text-align: center;
+		margin-left: 11%;
+	}
+}
+@media screen and (max-width: 1024px){
+	#footer-new {
+	    width: 100%;
+	    background-color: #000;
+	    margin: 0 auto;
+	    text-align: center;
+	    color: #e60b8a;
+	    font-weight: 190;
+	    padding-bottom: 25px;
+	}
 }

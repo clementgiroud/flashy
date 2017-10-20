@@ -22,9 +22,9 @@
 	<body>
 
 		<div class='footer'>
-			<!-- <div class="marque">
-			  <img border="0" src="<?= base_url('assets/images/partners.png')?>" width="754" height="58">
-		  </div> -->
+			<div class="marque">
+			  <img border="0" src="<?= base_url('assets/images/detendez-vous.png')?>" width="1000px" height="auto">
+		  </div>
 		<input type='hidden' id='image-cdn'  cdn='//assets.yandycdn.com' scdn='https://assets.yandycdn.com'>
 		<input type='hidden' id='domainname'  domain='http://www.yandy.com' sdomain='https://www.yandy.com'>
 		<input type='hidden' id='pre-load' value='false'>
@@ -39,25 +39,10 @@
 		          <div class="column16" style="vertical-align:top">
 		            <span class='h3'>ADRESSE</span>
 								<h5><span>ZAE VIA EUROPA EST</span> 1 Avenue de Rome</h5>
-								<h5>Bâtiment les cassis local 3</h5>
+								<h5>Bâtiment les cassis - local 3</h5>
 								<h5>34350 VENDRES</h5>
 		          </div>
-		          <!-- <div class="column16" style="vertical-align:top">
-		              <a href="/bridal_lingerie.asp">Bridal Lingerie</a><br>
-		              <a href="/Shopping/products/category_15.asp">Sexy Dresses</a><br>
 
-		              <a href="/wigs.php">Wigs</a><br>
-		              <a href="/Shopping/home/cat_thong.asp">Thongs</a><br>
-		              <a href="/Shopping/home/cat_gstring.asp">G-Strings</a><br>
-		              <a href="/fishnets.php">Fishnets</a><br>
-		          </div> -->
-		          <!-- <div class="column16" style="vertical-align:top">
-		              <a href="/Shopping/products/category_13.asp">Stockings</a><br>
-		              <a href="/bras.php">Bras</a><br>
-		              <a href="/swimwear.php">Swimwear</a><br>
-		              <a href="/clothing.php">Clothing</a><br>
-		              <a href="/pasties.php">Pasties</a><br>
-		          </div> -->
 		        </div>
 		            <div class="mob-footer-nav-wrap">
 		      <div class="column16" style="vertical-align:top">
@@ -67,7 +52,7 @@
 		      </div>
 		      <div class="column16" style="vertical-align:top">
 		        <span class='h3'>EMAIL</span>
-						<h5>mydavidferrer34@gmail.com</h5>
+						<h5>flashycarwash@gmail.com</h5>
 		      </div>
 		      <div class="column16" style="vertical-align:top">
 						<div id="fb-root" height="70">

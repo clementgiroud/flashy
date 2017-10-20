@@ -53,14 +53,14 @@ body{
 }
 
 .pop-bottom-right:hover{
-	color: #FE006E;
+	color: #FF0088;
 }
 
 #h-account {
     margin-bottom: 20px;
 		margin-right: 20px;
     background: black;
-		text-decoration-color: #FE006E;
+		text-decoration-color: #FF0088;
 		float: right;
 }
 
@@ -92,16 +92,22 @@ combo-simplifie…ss&0.1.4129:16
 
 #h-account-span:hover {
     font-weight: 600;
-    color: #FE006E;
+    color: #FF0088;
 
 }
 
 combo-simplifie…ss&0.1.4129:16
 #h-account-span {
     font-weight: 600;
-    color: #FE006E;
+    color: #FF0088;
 }
  /*FORMULAIRE DE CONTACT*/
+
+ .textcontact{
+	 text-align: center;
+	 display: block;
+	 margin: auto;
+ }
  .form-style-6{
     font: 95% Arial, Helvetica, sans-serif;
     max-width: 400px;
@@ -112,7 +118,7 @@ combo-simplifie…ss&0.1.4129:16
 		color: black;
 }
 .form-style-6 h1{
-    background: #FE006E;
+    background: #FF0088;
     padding: 20px 0;
     font-size: 140%;
     font-weight: 300;
@@ -171,7 +177,7 @@ combo-simplifie…ss&0.1.4129:16
     -moz-box-sizing: border-box;
     width: 100%;
     padding: 3%;
-    background: #FE006E;
+    background: #FF0088;
     /*border-bottom: 2px solid #30C29E;*/
 		border-radius: 5px;
     border-top-style: none;
@@ -181,7 +187,7 @@ combo-simplifie…ss&0.1.4129:16
 }
 .form-style-6 input[type="submit"]:hover,
 .form-style-6 input[type="button"]:hover{
-    background: #FE006E;
+    background: #FF0088;
 		border-radius: 5px;
 }
 /*FIN FORMULAIRE CONTACT*/
@@ -222,7 +228,7 @@ color: #fff;
 text-decoration: none;
 }
 .socialicon>li>a:hover{
-	color: #FE006E;
+	color: #FF0088;
 
 }
 
@@ -232,7 +238,7 @@ text-decoration: none;
 	letter-spacing: 1px;
 	font-family: 'chow fun';
 	font-size: 1.6em;
-	color: #FE006E;
+	color: #FF0088;
 	margin-bottom: 0px;
 	padding-left: 26.1%;
 }
@@ -377,21 +383,21 @@ padding-left: 5%;
     padding-right: 10px!important;
     margin-left: 34px;
     border-bottom: 2px solid rgba(0,0,0,.0);
-		border: 2px solid #FE006E;
+		border: 2px solid #FF0088;
 
   }
   #navbarontop > li >a:hover{
-  	background-color: #FE006E;
+  	background-color: #FF0088;
 		color: #fff;
   	background: none!important;
-  	border: 2px solid #FE006E;
+  	border: 2px solid #FF0088;
   }
 
 
  #navbarontop>button{
  	background: none;
  	background-color: none;
- 	border: 2px solid #FE006E;
+ 	border: 2px solid #FF0088;
  	font-family: 'BebasNeue Regular';
  	margin-left: 60px;
   	font-size: 16.99px;
@@ -402,14 +408,14 @@ padding-left: 5%;
   	padding-bottom:-2px;
  }
  #navbarontop>button:hover{
- 	background-color: #FE006E;
+ 	background-color: #FF0088;
  	color: #fff;
  }
  .dropdowncostume{
  	margin-left: 0px;
  }
  .dropdowncostume:hover{
-	 background-color: #FE006E;
+	 background-color: #FF0088;
  	margin-left: 0px;
  }
  .navbar-default .toggle-costume:hover,
@@ -426,7 +432,7 @@ padding-left: 5%;
 #navbarontop .open > a:hover,
 #navbarontop .open > a:focus {
 	background-color: none!important;
-  border-color: #FE006E;
+  border-color: #FF0088;
 }
 #navbarontop a:focus {
   outline: none;
@@ -492,7 +498,7 @@ margin:0 auto 0 auto;
 padding-bottom: 45px;
 padding-left: 10px;
 float:right;
-border: 3px solid #E60EB8;
+border: 3px solid #FF0088;
 
 }
 
@@ -504,7 +510,7 @@ margin:0 auto 0 auto;
 padding-bottom: 45px;
 padding-left: 10px;
 float: left;
-border: 3px solid #E60EB8;
+border: 3px solid #FF0088;
 }
 /*.hydro.p{
 	display: inline-block;
@@ -695,7 +701,7 @@ h1.TTC{
 }
 h1.HT{
 	display: inline;
-	color: #FE006E;
+	color: #FF0088;
 }
 li{
 	list-style: none;
@@ -713,16 +719,16 @@ h3.nom_option{
 	display: inline;
 }
 h3.ht{
-	color: #FE006E;
+	color: #FF0088;
 	display: inline;
 }
 h3.ht{
-	color: #FE006E;
+	color: #FF0088;
 	display: inline;
 
 }
 .option{
-	color:#FE006E;
+	color:#FF0088;
 
 }
 .panel-title{

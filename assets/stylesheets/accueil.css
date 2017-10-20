@@ -20,7 +20,7 @@ body {
 }
 
 .topbar.banner {
-    height: 122px;
+    height: 152px;
 }
 
 .topbar.banner>#top-nav {
@@ -194,6 +194,46 @@ fieldset {
     position: absolute;
     left: 0;
     top: 0;
+    white-space: nowrap;
+    float: left;
+}
+img.logoflashy{
+  float: left;
+}
+@media screen and (max-width: 1024px){
+  img.logoflashy{
+    float: left;
+    width: 30%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 740px){
+  img.logoflashy{
+    float: left;
+    width: 20%;
+    height: auto;
+  }
+}
+img.logo-detente{
+  margin-top: 25px;
+  margin-left: 130px;
+}
+@media screen and (max-width: 320px){
+  img.logo-detente{
+    /*margin-top: 25px;
+    margin-left: 130px;*/
+    width: auto;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1024px){
+  img.logo-detente{
+    margin-top: 12px;
+    margin-left: 5px;
+    margin-right: 100px;
+    width: 50%;
+    height: auto;
+  }
 }
 
 .logo a {
@@ -203,7 +243,7 @@ fieldset {
 
 @media (max-width:894px) {
     .logo {
-        width: 120px;
+        width: 95%;
         padding: 0;
         display: inline-block;
         vertical-align: middle
@@ -292,11 +332,12 @@ fieldset {
 
 #top-nav .black-bar {
     width: 80%;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     max-width: 1210px;
     min-width: 780px;
     text-align: center;
     position: relative;
+
 }
 
 #search,
@@ -504,7 +545,19 @@ fieldset {
 
 .top-nav-right ul li {
     padding: 20px 14px;
-    font-size: 20px
+    font-size: 20px;
+    margin-top: 15px;
+    /*padding-top: 10px;*/
+    position: absolute;
+}
+@media screen and (max-width: 1024px){
+  .top-nav-right ul li {
+    padding: 20px 14px;
+    font-size: 20px;
+    margin-top: 15px;
+    padding-top: 5px;
+    position: relative;
+  }
 }
 
 .nav>li>a,
@@ -665,6 +718,20 @@ fieldset {
 		width: 100%;
 	}
 
+
+  @media screen and (max-width: 320px) {
+
+  	.nav.clearfix.animated>li>a {
+
+  	}
+  }
+  @media screen and (max-width: 720px) {
+
+  	.nav.clearfix.animated>li>a {
+
+  	}
+  }
+
   @media screen and (max-width: 568px) {
   	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
   		margin-top: 0;
@@ -721,7 +788,7 @@ fieldset {
     min-width: 800px;
     position: fixed;
     z-index: 50;
-    top: 69px
+    top: 69px;
 }
 
 @media screen and (max-width: 900px) {

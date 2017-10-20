@@ -24,8 +24,9 @@
 
 
 	        <div class="black-bar">
-	            <div class="logo"><a title='flashy'  href='/' ><img
-	                            alt="logo" src="<?= base_url('assets/images/logo.png')?>" height="auto" width="400px"></a></div>
+	            <div class="logo"><a title='flashy'  href='/' ><img class="logoflashy"
+	                            alt="logo" src="<?= base_url('assets/images/logo.png')?>" height="auto" width="280px"></a>
+															<img class="logo-detente" alt="detentez-vous" src="<?= base_url('assets/images/nettoyage-site.png')?>" height="auto" width="500px"></div>
 
 
 	            <div class="top-nav-right">
@@ -59,7 +60,7 @@
 
 
               }else {?>
-								<a href="<?= site_url('user/login')?>" >Se Connecter</a>
+								<a href="<?= site_url('user/login')?>" >Connexion</a>
 
 								<ul>
 									<li class="login"> <span class="h2">Connexion</span>
@@ -109,7 +110,7 @@
 
           <li class="active" nav-id="19">
             <a href="<?= site_url('main'); ?>" >
-                <h1>ACCUEIL</h1>
+                ACCUEIL
             </a>
 
           </li>
