@@ -47,12 +47,12 @@
 		            <div class="mob-footer-nav-wrap">
 		      <div class="column16" style="vertical-align:top">
 		        <span class='h3'>TEL </span>
-						<h5>standart : 09.70.21.06.94</h5>
-						<h5>David : 0625771199</h5>
+						<h5>Standard : 09.70.21.06.94</h5>
+						<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;David : 06.25.77.11.99</h5>
 		      </div>
 		      <div class="column16" style="vertical-align:top">
 		        <span class='h3'>EMAIL</span>
-						<h5>flashycarwash@gmail.com</h5>
+						<h5></h5><button id="demo" onclick="copyToClipboard(document.getElementById('demo').innerHTML)">flashycarwash34@gmail.com</button>
 		      </div>
 		      <div class="column16" style="vertical-align:top">
 						<div id="fb-root" height="70">
@@ -64,6 +64,11 @@
   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<script>
+  function copyToClipboard(text) {
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+  }
+</script>
 		      </div>
 		    </div>
 

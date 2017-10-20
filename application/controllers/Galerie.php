@@ -34,9 +34,9 @@ class Galerie extends CI_Controller {
 		$config =	[
 						'upload_path'	=> 'assets/images/slide',
 									'allowed_types' => 'gif|jpg|png',
-									'max_size'      => 100,
-									'max_width'     => 1024,
-									'max_height'    => 768
+									'max_size'      => 500,
+									'max_width'     => 1280,
+									'max_height'    => 860
 								];
 
 					$this->load->library('upload', $config);

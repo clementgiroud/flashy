@@ -184,3 +184,8 @@ div.marque{
 	    padding-bottom: 25px;
 	}
 }
+#demo{
+	background-color: black;
+	color: #fff;
+	border: none;
+}
