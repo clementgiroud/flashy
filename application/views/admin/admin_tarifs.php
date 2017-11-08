@@ -37,10 +37,11 @@
 									<!-- Main menu -->
 									<li class="current"><a href="<?= site_url('admin/success')?>"><i class="glyphicon glyphicon-home"></i> Tableau de bord</a></li>
 									<li><a href="<?= site_url('admin/reservation')?>"><i class="glyphicon glyphicon-calendar"></i> Reservation</a></li>
-									<!-- <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li> -->
+									<li><a href="<?= site_url('admin/service')?>"><i class="glyphicon glyphicon-stats"></i> Services</a></li>
 									<li><a href="<?= site_url('gallery')?>"><i class="glyphicon glyphicon-list"></i> Galerie</a></li>
 									<li><a href="<?= site_url('gallery/slide')?>"><i class="glyphicon glyphicon-record"></i> Slider</a></li>
 									<li><a href="<?= site_url('admin/tarifs')?>"><i class="glyphicon glyphicon-pencil"></i> Tarifs</a></li>
+									<li><a href="<?= site_url('admin/nettoyage')?>"><i class="glyphicon glyphicon-list"></i> Nettoyage</a></li>
 									<li><a href="<?= site_url('admin/compte')?>"><i class="glyphicon glyphicon-tasks"></i> Compte utilisateur</a></li>
 									<li><a href="<?= site_url('user/logout')?>"><i class="glyphicon glyphicon-log-out"></i> Déconnexion</a></li>
 
@@ -68,11 +69,11 @@
     <table id="table_id" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
         <tr>
-					<th>tarif id </th>
-					<th>tarif Nom</th>
-					<th>tarif TTC</th>
-					<th>tarif HT</th>
-					<th>tarif Description</th>
+					<th>Id </th>
+					<th>Nom</th>
+					<th>Prix TTC</th>
+					<th>Prix HT</th>
+					<th>Description</th>
 
           <th style="width:125px;">Action
           </p></th>
@@ -101,11 +102,11 @@
 
       <tfoot>
         <tr>
-          <th>tarif id </th>
-					<th>tarif Nom</th>
-					<th>tarif TTC</th>
-					<th>tarif HT</th>
-					<th>tarif Description</th>
+					<th>Id </th>
+					<th>Nom</th>
+					<th>Prix TTC</th>
+					<th>Prix HT</th>
+					<th>Description</th>
           <th>Action</th>
         </tr>
       </tfoot>
@@ -138,7 +139,7 @@
       save_method = 'add';
       $('#form')[0].reset(); // reset form on modals
       $('#modal_form').modal('show'); // show bootstrap modal
-      $('.modal-title').text('Tarifs'); // Set Title to Bootstrap modal title
+      $('.modal-title').text('Ajouter des Tarifs'); // Set Title to Bootstrap modal title
     }
 
     function edit_tarif(id)
@@ -240,25 +241,30 @@
       </div>
       <div class="modal-body form">
         <form action="#" id="form" class="form-horizontal">
-          <input placeholder="Id Tarif" value="" name="id_tarif"/>
-					<label class="control-label col-md-3">ID tarif</label>
+
           <div class="form-body">
-            <div class="form-group">
-              <label class="control-label col-md-3">Tarif TTC</label>
+						<div class="form-group">
+              <label class="control-label col-md-3">ID</label>
               <div class="col-md-9">
-                <input name="prix_tarif_ttc" placeholder="Tarif TTC" class="form-control" type="text">
+                <input name="id_tarif" placeholder="ID" class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3">Prix TTC</label>
+              <div class="col-md-9">
+                <input name="prix_tarif_ttc" placeholder="Prix TTC" class="form-control" type="text">
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-md-3">Nom tarif</label>
               <div class="col-md-9">
-                <input name="nom_tarif" placeholder="Nom tarif" class="form-control" type="text">
+                <input name="nom_tarif" placeholder="Nom " class="form-control" type="text">
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label col-md-3">Tarif HT</label>
+              <label class="control-label col-md-3">Prix HT</label>
               <div class="col-md-9">
-								<input name="prix_tarif_ht" placeholder="Tarif HT" class="form-control" type="text">
+								<input name="prix_tarif_ht" placeholder="Prix HT" class="form-control" type="text">
 
               </div>
             </div>
@@ -274,8 +280,8 @@
         </form>
           </div>
           <div class="modal-footer">
-            <button type="button" id="btnSave" onclick="save()" class="btn btn-primary">Save</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            <button type="button" id="btnSave" onclick="save()" class="btn btn-primary">Enregistrer</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->

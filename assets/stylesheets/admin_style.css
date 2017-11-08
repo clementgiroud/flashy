@@ -338,4 +338,51 @@ margin-left: 10px;
    }
 }
 
+#main-content {
+  background: white;
+  padding: 50px;
+  color: #34495e;
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto; }
+  #main-content h2 {
+    margin-bottom: 1em;
+    text-align: center;
+   }
+@media screen and (min-width:0px) and (max-width:650px) {
+#main-content {
+	width: 95%;
+	padding: 50px 10px;
+}
+h1 {
+	font-size: 2em;
+}
+}
+
+p {
+  line-height: 1.5em; }
+
+#page2, #page3, #page4 {
+  display: none; }
+
+  .inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 50px auto; }
+
+  header nav {
+  margin: 40px 0;
+  text-align: center;
+ }
+
+header nav ul li {
+  display: inline-block; }
+  header nav ul li a {
+    padding: 10px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none; }
+    header nav ul li a.active, header nav ul li a:hover {
+      background: #587ca0; }
+
 /*FIN ADMIN FORM*/

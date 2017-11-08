@@ -14,7 +14,7 @@
   <body class="contact"><br/><br/><br/><br/><br/><br/>
     <div id="container-contact">
 
-      <img class="textcontact" alt="detendez-vous" src="<?= base_url('assets/images/contactez-nous.png')?>" height="auto" width="700px"><br/>
+      <img class="textcontact" alt="detendez-vous" src="<?= base_url('assets/images/contactez-nous.png')?>" height="auto" width="1000px"><br/>
 
       <div class="form-style-6">
       <h1>Nous contacter</h1>

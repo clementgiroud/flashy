@@ -88,7 +88,7 @@ if($this->input->post()){
 				<?=(isset($error)?$error:'')?>
 			</div>
 		<?php endif; ?>
-		<?=form_open_multipart('gallery/edit_slide/'.$image->id)?>
+		<?=form_open_multipart('gallery/edit_slide/'.$slide->id)?>
 
 		  <div class="form-group">
 		    <label for="userfile">Slide</label>

@@ -57,7 +57,7 @@ class Galerie extends CI_Controller {
 												'description'	=> set_value('description')
 											];
 									$this->Gallery_model->create($data);
-				$this->session->set_flashdata('message','New image has been added..');
+				$this->session->set_flashdata('message','Une nouvelle image a été ajoutée..');
 				redirect('gallery');
 					}
 	}

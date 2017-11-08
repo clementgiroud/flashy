@@ -41,6 +41,7 @@
 								<h5><span>ZAE VIA EUROPA EST</span> 1 Avenue de Rome</h5>
 								<h5>Bâtiment les cassis - local 3</h5>
 								<h5>34350 VENDRES</h5>
+								<h5>Proche sortie d'autoroute A9 Béziers Ouest</h5>
 		          </div>
 
 		        </div>
@@ -49,6 +50,7 @@
 		        <span class='h3'>TEL </span>
 						<h5>Standard : 09.70.21.06.94</h5>
 						<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;David : 06.25.77.11.99</h5>
+						<h5>&nbsp;&nbsp;&nbsp;Marvin : 06.11.39.91.79</h5>
 		      </div>
 		      <div class="column16" style="vertical-align:top">
 		        <span class='h3'>EMAIL</span>

@@ -107,7 +107,7 @@ class User extends CI_Controller {
 
             foreach($get_id as $val)
                 {
-											$username = $val->username;
+										 $username = $val->username;
                      $id = $val->id;
                      $email = $val->email;
                      $password = $val->password;

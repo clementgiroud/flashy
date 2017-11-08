@@ -17,28 +17,6 @@ class Main extends CI_Controller {
 
 
 
-  public function login() {
-    $this->load->view('pages/login');
-  }
-
-  public function members() {
-    $this->load->view('pages/members');
-  }
-
-  public function login_validation() {
-    $this->load->library('form_validation');
-
-    $this->form_validation->set_rules('email', 'Email', 'required|trim');
-    $this->form_validation->set_rules('password', 'Password', 'required|md5|trim');
-
-    if ($this->form_validation->run()) {
-      redirect('main/members');
-
-    } else {
-      $this->load->view('pages/login');
-    }
-  }
-
 	public function tarif()
 	{
 		$this->load->view('templates/header');
@@ -47,15 +25,21 @@ class Main extends CI_Controller {
 
 	public function services()
 	{
+		$this->load->helper(['url','html','form']);
+		$this->load->model('Admin_model');
+		$data['services']=$this->Admin_model->show_service();
 		$this->load->view('templates/header');
-		$this->load->view('pages/services');
+		$this->load->view('pages/services', $data);
 		$this->load->view('templates/footer');
 
 	}
 	public function nettoyage()
 	{
+		$data['slides']=$this->Admin_model->show_nettoyage();
+		$data['slides2']=$this->Admin_model->show_carrosserie();
+		$data['slides3']=$this->Admin_model->show_interieur();
 		$this->load->view('templates/header');
-		$this->load->view('pages/nettoyage');
+		$this->load->view('pages/nettoyage', $data);
 		$this->load->view('templates/footer');
 
 	}
